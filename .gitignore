@@ -8,3 +8,4 @@ state/collector.lock
 state/outbox/
 fixtures/data/_state/
 fixtures/data/_feed/
+public/feed/
