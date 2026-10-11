@@ -1,5 +1,23 @@
 # RepoRadar
 
+## GitHub Pages hosting
+
+The public website is built and deployed by `.github/workflows/pages.yml`.
+The workflow tests and builds `main`, then uploads only `dist/` to GitHub Pages.
+It runs on pushes, manual dispatches, and completion of the daily collector
+(including failures, so the last good feed can show a failed-run warning).
+Collection and notifications remain independently controlled.
+
+GitHub Pages serves this app under `/reporadar/`; Vite's relative asset paths
+and hash routing work without a server-side rewrite.
+Vercel remains an alternative, but its HTTP security headers in `vercel.json`
+are not applied by GitHub Pages.
+
+**Public repository privacy warning:** every Git branch is public, including
+any future `ops-state` branch. Do not enable Telegram delivery with the current
+branch-based delivery-state storage if notification history must remain private.
+Move that state to a separate private repository before enabling delivery.
+
 A personal website for discovering and learning about GitHub repositories that are gaining traction.
 
 Version one is deliberately small: collect GitHub Trending (daily) once a day, save a dated JSON snapshot, and compare the latest successful snapshot with the previous one. No database and no monitoring of all of GitHub.
