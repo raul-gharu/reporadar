@@ -1,0 +1,9 @@
+{
+  "$comment": "Keyword rules for categorising repositories from their description, name and GitHub topics. Matching is whole-word and case-insensitive.",
+  "ai": ["ai", "llm", "llms", "gpt", "agent", "agents", "agentic", "rag", "machine learning", "deep learning", "neural", "transformer", "diffusion", "openai", "anthropic", "claude", "gemini", "ollama", "inference", "embedding", "embeddings", "mcp", "pytorch", "tensorflow", "chatbot", "langchain", "fine-tuning", "model", "models", "artificial intelligence", "copilot", "vision-language"],
+  "devtools": ["cli", "terminal", "developer", "developers", "devtools", "ide", "editor", "debugger", "debugging", "compiler", "linter", "sdk", "git", "github", "testing", "profiler", "reverse engineer", "code review", "build tool", "package manager", "vscode", "neovim", "shell"],
+  "automation": ["automation", "automate", "workflow", "workflows", "n8n", "scheduler", "cron", "bot", "bots", "scraper", "pipeline", "orchestration", "rpa", "zapier", "browser automation", "playwright", "puppeteer"],
+  "webdev": ["web", "website", "react", "vue", "svelte", "nextjs", "next.js", "vite", "tailwind", "css", "html", "frontend", "front-end", "javascript", "typescript", "node", "nodejs", "deno", "bun", "http", "api", "rest", "graphql", "ui", "design system", "component", "components"],
+  "data": ["database", "sql", "postgres", "sqlite", "analytics", "dataset", "datasets", "etl", "data", "vector database", "visualisation", "visualization"],
+  "security": ["security", "pentest", "exploit", "vulnerability", "cve", "malware", "reverse engineering", "osint", "privacy", "encryption", "auth"]
+}

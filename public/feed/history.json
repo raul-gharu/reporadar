@@ -1,0 +1,943 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-11T14:29:32.168Z",
+  "days": [
+    {
+      "date": "2026-10-11",
+      "collectedAt": "2026-10-11T06:14:00.000Z",
+      "origin": "fixture",
+      "repoCount": 12,
+      "previousDate": "2026-10-10",
+      "spanHours": 24,
+      "spansMultipleDays": false,
+      "missingDates": [],
+      "newCount": 2,
+      "top": [
+        {
+          "fullName": "morluto/rea",
+          "rank": 1,
+          "starsToday": 25585,
+          "totalStars": 90089,
+          "netStarGrowth": 24817,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "security",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "boykopovar/AnyPS5",
+          "rank": 2,
+          "starsToday": 3977,
+          "totalStars": 28677,
+          "netStarGrowth": 3858,
+          "appearance": "continuing",
+          "language": "C++",
+          "categories": [
+            "other"
+          ]
+        },
+        {
+          "fullName": "storytold/artcraft",
+          "rank": 3,
+          "starsToday": 2956,
+          "totalStars": 16273,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "Rust",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "cathrynlavery/diagram-design",
+          "rank": 4,
+          "starsToday": 1083,
+          "totalStars": 49732,
+          "netStarGrowth": 1051,
+          "appearance": "continuing",
+          "language": "HTML",
+          "categories": [
+            "ai",
+            "devtools",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "bilawalsidhu/gods-eye-view",
+          "rank": 5,
+          "starsToday": 872,
+          "totalStars": 50911,
+          "netStarGrowth": null,
+          "appearance": "returning",
+          "language": "JavaScript",
+          "categories": [
+            "data",
+            "security",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "microsoft/markitdown",
+          "rank": 6,
+          "starsToday": 640,
+          "totalStars": 189510,
+          "netStarGrowth": 621,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "lyogavin/airllm",
+          "rank": 7,
+          "starsToday": 541,
+          "totalStars": 36182,
+          "netStarGrowth": 525,
+          "appearance": "continuing",
+          "language": "Jupyter Notebook",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "chrislgarry/Apollo-11",
+          "rank": 8,
+          "starsToday": 496,
+          "totalStars": 73948,
+          "netStarGrowth": null,
+          "appearance": "returning",
+          "language": "Assembly",
+          "categories": [
+            "other"
+          ]
+        },
+        {
+          "fullName": "n8n-io/n8n",
+          "rank": 9,
+          "starsToday": 330,
+          "totalStars": 206987,
+          "netStarGrowth": 320,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "automation",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "pytorch/pytorch",
+          "rank": 10,
+          "starsToday": 314,
+          "totalStars": 104313,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "Python",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "sherlock-project/sherlock",
+          "rank": 11,
+          "starsToday": 190,
+          "totalStars": 93834,
+          "netStarGrowth": null,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "devtools",
+            "security"
+          ]
+        },
+        {
+          "fullName": "browser-use/browser-use",
+          "rank": 12,
+          "starsToday": null,
+          "totalStars": 117629,
+          "netStarGrowth": 45,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai",
+            "automation"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "collectedAt": "2026-10-10T06:13:00.000Z",
+      "origin": "fixture",
+      "repoCount": 10,
+      "previousDate": "2026-10-09",
+      "spanHours": 23.5,
+      "spansMultipleDays": false,
+      "missingDates": [],
+      "newCount": 3,
+      "top": [
+        {
+          "fullName": "morluto/rea",
+          "rank": 1,
+          "starsToday": 18400,
+          "totalStars": 65272,
+          "netStarGrowth": 17848,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "security",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "boykopovar/AnyPS5",
+          "rank": 2,
+          "starsToday": 2100,
+          "totalStars": 24819,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "C++",
+          "categories": [
+            "other"
+          ]
+        },
+        {
+          "fullName": "microsoft/markitdown",
+          "rank": 3,
+          "starsToday": 980,
+          "totalStars": 188889,
+          "netStarGrowth": 951,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "cathrynlavery/diagram-design",
+          "rank": 4,
+          "starsToday": 950,
+          "totalStars": 48681,
+          "netStarGrowth": null,
+          "appearance": "returning",
+          "language": "HTML",
+          "categories": [
+            "ai",
+            "devtools",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "lyogavin/airllm",
+          "rank": 5,
+          "starsToday": 610,
+          "totalStars": 35657,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "Jupyter Notebook",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "browser-use/browser-use",
+          "rank": 6,
+          "starsToday": 380,
+          "totalStars": 117584,
+          "netStarGrowth": 369,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai",
+            "automation"
+          ]
+        },
+        {
+          "fullName": "n8n-io/n8n",
+          "rank": 7,
+          "starsToday": 360,
+          "totalStars": 206667,
+          "netStarGrowth": 349,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "automation",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "sherlock-project/sherlock",
+          "rank": 8,
+          "starsToday": 260,
+          "totalStars": null,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "Python",
+          "categories": [
+            "devtools",
+            "security"
+          ]
+        },
+        {
+          "fullName": "supabase/supabase",
+          "rank": 9,
+          "starsToday": 240,
+          "totalStars": 111305,
+          "netStarGrowth": 233,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "webdev",
+            "data",
+            "security"
+          ]
+        },
+        {
+          "fullName": "microsoft/playwright",
+          "rank": 10,
+          "starsToday": 205,
+          "totalStars": 97428,
+          "netStarGrowth": 199,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "devtools",
+            "automation",
+            "webdev"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "collectedAt": "2026-10-09T06:41:00.000Z",
+      "origin": "fixture",
+      "repoCount": 8,
+      "previousDate": "2026-10-07",
+      "spanHours": 48.5,
+      "spansMultipleDays": true,
+      "missingDates": [
+        "2026-10-08"
+      ],
+      "newCount": 0,
+      "top": [
+        {
+          "fullName": "morluto/rea",
+          "rank": 1,
+          "starsToday": 9800,
+          "totalStars": 47424,
+          "netStarGrowth": 19012,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "security",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "microsoft/markitdown",
+          "rank": 2,
+          "starsToday": 1210,
+          "totalStars": 187938,
+          "netStarGrowth": 2348,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "browser-use/browser-use",
+          "rank": 3,
+          "starsToday": 410,
+          "totalStars": 117215,
+          "netStarGrowth": 796,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai",
+            "automation"
+          ]
+        },
+        {
+          "fullName": "n8n-io/n8n",
+          "rank": 4,
+          "starsToday": 380,
+          "totalStars": 206318,
+          "netStarGrowth": 738,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "automation",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "shadcn-ui/ui",
+          "rank": 5,
+          "starsToday": 300,
+          "totalStars": 125240,
+          "netStarGrowth": 582,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "supabase/supabase",
+          "rank": 6,
+          "starsToday": 260,
+          "totalStars": 111072,
+          "netStarGrowth": null,
+          "appearance": "returning",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "webdev",
+            "data",
+            "security"
+          ]
+        },
+        {
+          "fullName": "microsoft/playwright",
+          "rank": 7,
+          "starsToday": 210,
+          "totalStars": 97229,
+          "netStarGrowth": 408,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "devtools",
+            "automation",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "tailwindlabs/tailwindcss",
+          "rank": 8,
+          "starsToday": 190,
+          "totalStars": 97790,
+          "netStarGrowth": 368,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "webdev"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "collectedAt": "2026-10-07T06:11:00.000Z",
+      "origin": "fixture",
+      "repoCount": 9,
+      "previousDate": "2026-10-06",
+      "spanHours": 23.9,
+      "spansMultipleDays": false,
+      "missingDates": [],
+      "newCount": 2,
+      "top": [
+        {
+          "fullName": "morluto/rea",
+          "rank": 1,
+          "starsToday": 3100,
+          "totalStars": 28412,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "security",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "microsoft/markitdown",
+          "rank": 2,
+          "starsToday": 1450,
+          "totalStars": 185590,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "Python",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "cathrynlavery/diagram-design",
+          "rank": 3,
+          "starsToday": 820,
+          "totalStars": 47669,
+          "netStarGrowth": 795,
+          "appearance": "continuing",
+          "language": "HTML",
+          "categories": [
+            "ai",
+            "devtools",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "browser-use/browser-use",
+          "rank": 4,
+          "starsToday": 540,
+          "totalStars": 116419,
+          "netStarGrowth": 524,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai",
+            "automation"
+          ]
+        },
+        {
+          "fullName": "ollama/ollama",
+          "rank": 5,
+          "starsToday": 470,
+          "totalStars": 182562,
+          "netStarGrowth": 456,
+          "appearance": "continuing",
+          "language": "Go",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "n8n-io/n8n",
+          "rank": 6,
+          "starsToday": 430,
+          "totalStars": 205580,
+          "netStarGrowth": 417,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "automation",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "shadcn-ui/ui",
+          "rank": 7,
+          "starsToday": 330,
+          "totalStars": 124658,
+          "netStarGrowth": 320,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "microsoft/playwright",
+          "rank": 8,
+          "starsToday": 220,
+          "totalStars": 96821,
+          "netStarGrowth": 213,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "devtools",
+            "automation",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "tailwindlabs/tailwindcss",
+          "rank": 9,
+          "starsToday": 200,
+          "totalStars": 97422,
+          "netStarGrowth": 194,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "webdev"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "collectedAt": "2026-10-06T06:15:00.000Z",
+      "origin": "fixture",
+      "repoCount": 8,
+      "previousDate": "2026-10-05",
+      "spanHours": 24.1,
+      "spansMultipleDays": false,
+      "missingDates": [],
+      "newCount": 2,
+      "top": [
+        {
+          "fullName": "bilawalsidhu/gods-eye-view",
+          "rank": 1,
+          "starsToday": 760,
+          "totalStars": 49885,
+          "netStarGrowth": 737,
+          "appearance": "continuing",
+          "language": "JavaScript",
+          "categories": [
+            "data",
+            "security",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "browser-use/browser-use",
+          "rank": 2,
+          "starsToday": 690,
+          "totalStars": 115895,
+          "netStarGrowth": 669,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai",
+            "automation"
+          ]
+        },
+        {
+          "fullName": "cathrynlavery/diagram-design",
+          "rank": 3,
+          "starsToday": 640,
+          "totalStars": 46874,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "HTML",
+          "categories": [
+            "ai",
+            "devtools",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "ollama/ollama",
+          "rank": 4,
+          "starsToday": 500,
+          "totalStars": 182106,
+          "netStarGrowth": 485,
+          "appearance": "continuing",
+          "language": "Go",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "n8n-io/n8n",
+          "rank": 5,
+          "starsToday": 450,
+          "totalStars": 205163,
+          "netStarGrowth": 437,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "automation",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "shadcn-ui/ui",
+          "rank": 6,
+          "starsToday": 360,
+          "totalStars": 124338,
+          "netStarGrowth": 349,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "microsoft/playwright",
+          "rank": 7,
+          "starsToday": 240,
+          "totalStars": 96608,
+          "netStarGrowth": 233,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "devtools",
+            "automation",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "tailwindlabs/tailwindcss",
+          "rank": 8,
+          "starsToday": 220,
+          "totalStars": 97228,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "TypeScript",
+          "categories": [
+            "webdev"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "collectedAt": "2026-10-05T06:09:00.000Z",
+      "origin": "fixture",
+      "repoCount": 8,
+      "previousDate": "2026-10-04",
+      "spanHours": 24,
+      "spansMultipleDays": false,
+      "missingDates": [],
+      "newCount": 2,
+      "top": [
+        {
+          "fullName": "bilawalsidhu/gods-eye-view",
+          "rank": 1,
+          "starsToday": 980,
+          "totalStars": 49148,
+          "netStarGrowth": 951,
+          "appearance": "continuing",
+          "language": "JavaScript",
+          "categories": [
+            "data",
+            "security",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "browser-use/browser-use",
+          "rank": 2,
+          "starsToday": 760,
+          "totalStars": 115226,
+          "netStarGrowth": 737,
+          "appearance": "continuing",
+          "language": "Python",
+          "categories": [
+            "ai",
+            "automation"
+          ]
+        },
+        {
+          "fullName": "ollama/ollama",
+          "rank": 3,
+          "starsToday": 540,
+          "totalStars": 181621,
+          "netStarGrowth": 524,
+          "appearance": "continuing",
+          "language": "Go",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "n8n-io/n8n",
+          "rank": 4,
+          "starsToday": 470,
+          "totalStars": 204726,
+          "netStarGrowth": 456,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "automation",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "chrislgarry/Apollo-11",
+          "rank": 5,
+          "starsToday": 420,
+          "totalStars": 73242,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "Assembly",
+          "categories": [
+            "other"
+          ]
+        },
+        {
+          "fullName": "shadcn-ui/ui",
+          "rank": 6,
+          "starsToday": 390,
+          "totalStars": 123989,
+          "netStarGrowth": 378,
+          "appearance": "continuing",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "astral-sh/uv",
+          "rank": 7,
+          "starsToday": 280,
+          "totalStars": 90344,
+          "netStarGrowth": 272,
+          "appearance": "continuing",
+          "language": "Rust",
+          "categories": [
+            "other"
+          ]
+        },
+        {
+          "fullName": "microsoft/playwright",
+          "rank": 8,
+          "starsToday": 250,
+          "totalStars": 96375,
+          "netStarGrowth": null,
+          "appearance": "new",
+          "language": "TypeScript",
+          "categories": [
+            "devtools",
+            "automation",
+            "webdev"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "collectedAt": "2026-10-04T06:12:00.000Z",
+      "origin": "fixture",
+      "repoCount": 7,
+      "previousDate": null,
+      "spanHours": null,
+      "spansMultipleDays": false,
+      "missingDates": [],
+      "newCount": null,
+      "top": [
+        {
+          "fullName": "bilawalsidhu/gods-eye-view",
+          "rank": 1,
+          "starsToday": 1200,
+          "totalStars": 48197,
+          "netStarGrowth": null,
+          "appearance": "unknown",
+          "language": "JavaScript",
+          "categories": [
+            "data",
+            "security",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "browser-use/browser-use",
+          "rank": 2,
+          "starsToday": 880,
+          "totalStars": 114489,
+          "netStarGrowth": null,
+          "appearance": "unknown",
+          "language": "Python",
+          "categories": [
+            "ai",
+            "automation"
+          ]
+        },
+        {
+          "fullName": "ollama/ollama",
+          "rank": 3,
+          "starsToday": 610,
+          "totalStars": 181097,
+          "netStarGrowth": null,
+          "appearance": "unknown",
+          "language": "Go",
+          "categories": [
+            "ai"
+          ]
+        },
+        {
+          "fullName": "n8n-io/n8n",
+          "rank": 4,
+          "starsToday": 520,
+          "totalStars": 204270,
+          "netStarGrowth": null,
+          "appearance": "unknown",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "devtools",
+            "automation",
+            "webdev",
+            "data"
+          ]
+        },
+        {
+          "fullName": "shadcn-ui/ui",
+          "rank": 5,
+          "starsToday": 410,
+          "totalStars": 123611,
+          "netStarGrowth": null,
+          "appearance": "unknown",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "webdev"
+          ]
+        },
+        {
+          "fullName": "astral-sh/uv",
+          "rank": 6,
+          "starsToday": 300,
+          "totalStars": 90072,
+          "netStarGrowth": null,
+          "appearance": "unknown",
+          "language": "Rust",
+          "categories": [
+            "other"
+          ]
+        },
+        {
+          "fullName": "supabase/supabase",
+          "rank": 7,
+          "starsToday": 290,
+          "totalStars": 110433,
+          "netStarGrowth": null,
+          "appearance": "unknown",
+          "language": "TypeScript",
+          "categories": [
+            "ai",
+            "webdev",
+            "data",
+            "security"
+          ]
+        }
+      ]
+    }
+  ],
+  "failedRuns": [
+    {
+      "date": "2026-10-08",
+      "finishedAt": "2026-10-08T06:10:21.000Z",
+      "message": "Trending page returned HTTP 503"
+    }
+  ]
+}

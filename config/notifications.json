@@ -1,0 +1,15 @@
+{
+  "$comment": "Notification preferences (v1 keeps these in a file, not a database). Telegram delivery stays off until you approve it and add secrets.",
+  "enabled": false,
+  "channel": "telegram",
+  "rule": {
+    "categories": ["ai", "devtools", "automation", "webdev"],
+    "minDisplayedStarsToday": 100,
+    "cooldownDays": 7,
+    "maxPerDigest": 3
+  },
+  "digest": {
+    "title": "RepoRadar daily discoveries",
+    "siteUrl": null
+  }
+}

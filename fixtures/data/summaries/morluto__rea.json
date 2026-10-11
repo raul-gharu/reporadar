@@ -1,0 +1,62 @@
+{
+  "fullName": "morluto/rea",
+  "cacheKey": "612871631b75c5ec9b17d5c58784e5da",
+  "generatedAt": "2026-10-11T06:20:00.000Z",
+  "model": "fixture (hand-written, no model call)",
+  "promptVersion": "learn-v1",
+  "readmeSha": "ac85e75487f18c82637494d930a06b3f25780e1c",
+  "origin": "fixture",
+  "summary": {
+    "whatItDoes": "REA (Reverse Engineer Anything) is an MCP server and CLI that lets a coding agent inspect native binaries, JavaScript and Electron apps, .NET assemblies and websites without their source code, returning findings together with the evidence and limitations behind them.",
+    "intendedUsers": [
+      "Developers who use coding agents such as Claude Code, Codex, Cursor or Gemini CLI",
+      "People curious how a feature in an existing app is implemented"
+    ],
+    "documentedTechnologies": [
+      "MCP",
+      "Node.js",
+      "npm",
+      "Electron",
+      "JavaScript",
+      "Hopper",
+      "Ghidra",
+      "IDA",
+      "Bun"
+    ],
+    "learningOpportunities": [
+      "Study how an MCP server exposes analysis tools to an agent and returns evidence with each result.",
+      "Learn what static analysis of an Electron app reveals: modules, imports and Electron boundaries.",
+      "Compare agent-driven workflows with running the same commands from a terminal."
+    ],
+    "smallExperiment": {
+      "title": "Statically inspect an Electron app you own",
+      "steps": [
+        "Read the Quick start and the CLI and Evidence guide in the repository first.",
+        "Inside a disposable VM or container with Node.js 22+, extract an Electron app you built yourself.",
+        "Run the documented analyze-javascript-application command with --json against that directory.",
+        "Review the modules, imports and Electron boundaries it reports against what you know of your app."
+      ]
+    },
+    "caveats": [
+      "Setup changes your agent configuration; the README asks you to review the proposed changes before approving them.",
+      "Native analysis depends on Hopper, Ghidra or IDA being installed, and support varies by target and host.",
+      "Only analyse software you are licensed and permitted to reverse engineer.",
+      "The README notes that REA changes quickly, so commands may differ between releases."
+    ],
+    "sources": [
+      {
+        "label": "Repository",
+        "url": "https://github.com/morluto/rea"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/morluto/rea/blob/main/README.md"
+      },
+      {
+        "label": "Project website",
+        "url": "https://rea.tools/"
+      }
+    ]
+  },
+  "validationNotes": []
+}

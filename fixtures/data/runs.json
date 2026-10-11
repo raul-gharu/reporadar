@@ -1,0 +1,74 @@
+[
+  {
+    "runId": "fixture-2026-10-04",
+    "startedAt": "2026-10-04T06:12:00.000Z",
+    "finishedAt": "2026-10-04T06:12:38.000Z",
+    "status": "success",
+    "date": "2026-10-04",
+    "message": "Collected 7 repositories."
+  },
+  {
+    "runId": "fixture-2026-10-05",
+    "startedAt": "2026-10-05T06:09:00.000Z",
+    "finishedAt": "2026-10-05T06:09:38.000Z",
+    "status": "success",
+    "date": "2026-10-05",
+    "message": "Collected 8 repositories."
+  },
+  {
+    "runId": "fixture-2026-10-06",
+    "startedAt": "2026-10-06T06:15:00.000Z",
+    "finishedAt": "2026-10-06T06:15:38.000Z",
+    "status": "success",
+    "date": "2026-10-06",
+    "message": "Collected 8 repositories."
+  },
+  {
+    "runId": "fixture-2026-10-07",
+    "startedAt": "2026-10-07T06:11:00.000Z",
+    "finishedAt": "2026-10-07T06:11:38.000Z",
+    "status": "success",
+    "date": "2026-10-07",
+    "message": "Collected 9 repositories."
+  },
+  {
+    "runId": "fixture-2026-10-08",
+    "startedAt": "2026-10-08T06:10:00.000Z",
+    "finishedAt": "2026-10-08T06:10:21.000Z",
+    "status": "failed",
+    "date": "2026-10-08",
+    "message": "Trending page returned HTTP 503"
+  },
+  {
+    "runId": "fixture-2026-10-09",
+    "startedAt": "2026-10-09T06:41:00.000Z",
+    "finishedAt": "2026-10-09T06:41:38.000Z",
+    "status": "success",
+    "date": "2026-10-09",
+    "message": "Collected 8 repositories."
+  },
+  {
+    "runId": "fixture-2026-10-10",
+    "startedAt": "2026-10-10T06:13:00.000Z",
+    "finishedAt": "2026-10-10T06:13:38.000Z",
+    "status": "success",
+    "date": "2026-10-10",
+    "message": "Collected 10 repositories."
+  },
+  {
+    "runId": "fixture-2026-10-10-rerun",
+    "startedAt": "2026-10-10T09:02:00.000Z",
+    "finishedAt": "2026-10-10T09:02:01.000Z",
+    "status": "skipped",
+    "date": "2026-10-10",
+    "message": "Snapshot for 2026-10-10 already collected at 2026-10-10T06:13:00.000Z; nothing to do."
+  },
+  {
+    "runId": "fixture-2026-10-11",
+    "startedAt": "2026-10-11T06:14:00.000Z",
+    "finishedAt": "2026-10-11T06:14:38.000Z",
+    "status": "success",
+    "date": "2026-10-11",
+    "message": "Collected 12 repositories."
+  }
+]

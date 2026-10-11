@@ -1,0 +1,53 @@
+{
+  "fullName": "microsoft/markitdown",
+  "cacheKey": "10315049dae68c6cd8e096119450322f",
+  "generatedAt": "2026-10-11T06:20:00.000Z",
+  "model": "fixture (hand-written, no model call)",
+  "promptVersion": "learn-v1",
+  "readmeSha": "fa33f6b343cf54de037cfdb82337cc70d5fbc47b",
+  "origin": "fixture",
+  "summary": {
+    "whatItDoes": "A lightweight Python utility that converts files such as PDF, PowerPoint, Word, Excel, images, audio, HTML, CSV/JSON/XML, ZIP files, YouTube URLs and EPubs into Markdown, aimed at LLM and text-analysis pipelines rather than high-fidelity human-readable conversion.",
+    "intendedUsers": [
+      "Developers building LLM or RAG pipelines that need document text",
+      "People who want a command-line tool to turn documents into Markdown"
+    ],
+    "documentedTechnologies": [
+      "Python",
+      "Markdown",
+      "OpenAI",
+      "Document Intelligence",
+      "uv"
+    ],
+    "learningOpportunities": [
+      "See how one API (convert) can route many file types to format-specific converters.",
+      "Learn why Markdown is a token-efficient intermediate format for LLM input.",
+      "Read the Security Considerations section to understand the risks of converting untrusted inputs."
+    ],
+    "smallExperiment": {
+      "title": "Convert one of your own PDFs and compare the Markdown",
+      "steps": [
+        "Create a fresh Python virtual environment as described in the README.",
+        "Install the package with pip install 'markitdown[all]'.",
+        "Run markitdown on a PDF you created yourself and redirect the output to a .md file.",
+        "Compare headings, lists and tables in the Markdown against the original document."
+      ]
+    },
+    "caveats": [
+      "The README says it performs I/O with the privileges of the current process; do not pass untrusted inputs to it directly.",
+      "Output is meant for text-analysis tools and may not suit high-fidelity conversion for people.",
+      "LLM image descriptions require your own OpenAI-compatible client and incur that provider's costs."
+    ],
+    "sources": [
+      {
+        "label": "Repository",
+        "url": "https://github.com/microsoft/markitdown"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/microsoft/markitdown/blob/main/README.md"
+      }
+    ]
+  },
+  "validationNotes": []
+}

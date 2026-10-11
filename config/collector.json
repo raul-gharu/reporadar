@@ -1,0 +1,20 @@
+{
+  "$comment": "Collector behaviour. No secrets in this file.",
+  "trendingUrl": "https://github.com/trending?since=daily",
+  "userAgent": "RepoRadar/0.1 (+personal project; daily)",
+  "requestTimeoutMs": 20000,
+  "minReposForValidSnapshot": 5,
+  "staleAfterHours": 30,
+  "multiDayThresholdHours": 26,
+  "historyDaysInFeed": 30,
+  "lockStaleAfterMinutes": 30,
+  "enrichWithGitHubApi": true,
+  "summaries": {
+    "enabled": false,
+    "maxPerRun": 3,
+    "maxReadmeChars": 12000,
+    "maxOutputTokens": 1200,
+    "promptVersion": "learn-v1",
+    "selected": []
+  }
+}

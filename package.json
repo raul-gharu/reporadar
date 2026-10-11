@@ -1,0 +1,44 @@
+{
+  "name": "reporadar",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run feed && tsc -p tsconfig.web.json --noEmit && vite build",
+    "build:web": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.web.json --noEmit && tsc -p tsconfig.collector.json --noEmit",
+    "test": "vitest run",
+    "fixtures": "tsx collector/src/cli.ts fixtures",
+    "collect": "tsx collector/src/cli.ts collect",
+    "feed": "tsx collector/src/cli.ts feed",
+    "summarise": "tsx collector/src/cli.ts summarise",
+    "notify": "tsx collector/src/cli.ts notify",
+    "daily": "tsx collector/src/cli.ts daily"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "lucide-react": "^1.55.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "wouter": "^3.13.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}
