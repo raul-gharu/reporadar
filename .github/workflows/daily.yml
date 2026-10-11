@@ -1,0 +1,95 @@
+name: Daily collection
+# Runs once a day. Not enabled until this repository is pushed to GitHub and you
+# choose to enable Actions. Secrets are optional; see README "Accounts & credentials".
+on:
+  schedule:
+    - cron: "17 6 * * *" # 06:17 UTC daily (off the hour to avoid GitHub's busiest minute)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-collect even if today's snapshot exists"
+        type: boolean
+        default: false
+
+# Never run two collections at once; queue instead of cancelling a run mid-write.
+concurrency:
+  group: reporadar-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write # commit snapshots (main) and private delivery state (ops-state branch)
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+
+      # Private operational state lives on a separate orphan branch, outside the
+      # website build. Created automatically on the first run.
+      - name: Check out ops-state branch into state/
+        run: |
+          if git ls-remote --exit-code --heads origin ops-state >/dev/null 2>&1; then
+            git fetch --depth 1 origin ops-state
+            git worktree add state origin/ops-state --detach
+          else
+            mkdir -p state
+          fi
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+
+      # Refuse to collect with a broken parser or comparison logic.
+      - run: npm test
+
+      - name: Collect, summarise, build feed, notify
+        id: daily
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}           # automatic; read-only API use
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}             # optional; summaries stay off without it
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }} # optional
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}     # optional
+        run: |
+          ARGS=""
+          if [ "${{ vars.REPORADAR_SEND }}" = "true" ]; then ARGS="--send"; fi
+          if [ "${{ inputs.force }}" = "true" ]; then npx tsx collector/src/cli.ts collect --force; fi
+          npx tsx collector/src/cli.ts daily $ARGS
+
+      - name: Commit snapshots and run log to main
+        if: always()
+        run: |
+          # Vercel Hobby only deploys private-repo commits authored by the account owner,
+          # so commits use YOUR identity from repository variables (see README).
+          git config user.name "${{ vars.REPORADAR_GIT_NAME || 'reporadar-bot' }}"
+          git config user.email "${{ vars.REPORADAR_GIT_EMAIL || '41898282+github-actions[bot]@users.noreply.github.com' }}"
+          git add data/
+          if git diff --cached --quiet; then echo "No data changes"; exit 0; fi
+          git commit -m "data: snapshot $(date -u +%F)"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && exit 0; sleep 5; done
+          exit 1
+
+      - name: Commit delivery state to ops-state
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd state
+          [ -e .git ] || git init -q -b ops-state
+          git config user.name "${{ vars.REPORADAR_GIT_NAME || 'reporadar-bot' }}"
+          git config user.email "${{ vars.REPORADAR_GIT_EMAIL || '41898282+github-actions[bot]@users.noreply.github.com' }}"
+          rm -f collector.lock
+          rm -rf outbox
+          git add -A
+          if git diff --cached --quiet; then echo "No state changes"; exit 0; fi
+          git commit -qm "state: $(date -u +%FT%TZ)"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:ops-state
+
+      - name: Fail the job if collection failed (last good feed was kept)
+        if: steps.daily.outcome == 'failure'
+        run: exit 1

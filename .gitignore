@@ -4,8 +4,7 @@ dist/
 .env.*
 !.env.example
 *.tmp
-state/collector.lock
-state/outbox/
+state/
 fixtures/data/_state/
 fixtures/data/_feed/
 public/feed/
