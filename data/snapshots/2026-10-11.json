@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-11",
+  "collectedAt": "2026-10-11T15:10:00.363Z",
+  "source": {
+    "url": "https://github.com/trending?since=daily",
+    "since": "daily",
+    "parserVersion": "trending-html-2"
+  },
+  "origin": "live",
+  "repos": [
+    {
+      "rank": 1,
+      "fullName": "morluto/rea",
+      "owner": "morluto",
+      "name": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "totalStars": 91486,
+      "forks": 20287,
+      "starsToday": 25585
+    },
+    {
+      "rank": 2,
+      "fullName": "boykopovar/AnyPS5",
+      "owner": "boykopovar",
+      "name": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "totalStars": 28774,
+      "forks": 2455,
+      "starsToday": 3977
+    },
+    {
+      "rank": 3,
+      "fullName": "storytold/artcraft",
+      "owner": "storytold",
+      "name": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "totalStars": 16433,
+      "forks": 2671,
+      "starsToday": 2956
+    },
+    {
+      "rank": 4,
+      "fullName": "cathrynlavery/diagram-design",
+      "owner": "cathrynlavery",
+      "name": "diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "totalStars": 49792,
+      "forks": 3155,
+      "starsToday": 1083
+    },
+    {
+      "rank": 5,
+      "fullName": "bilawalsidhu/gods-eye-view",
+      "owner": "bilawalsidhu",
+      "name": "gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "totalStars": 50974,
+      "forks": 10272,
+      "starsToday": 872
+    },
+    {
+      "rank": 6,
+      "fullName": "pytorch/pytorch",
+      "owner": "pytorch",
+      "name": "pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
+      "language": "Python",
+      "totalStars": 104328,
+      "forks": 32058,
+      "starsToday": 314
+    },
+    {
+      "rank": 7,
+      "fullName": "lyogavin/airllm",
+      "owner": "lyogavin",
+      "name": "airllm",
+      "url": "https://github.com/lyogavin/airllm",
+      "description": "AirLLM 70B inference with single 4GB GPU",
+      "language": "Jupyter Notebook",
+      "totalStars": 36203,
+      "forks": 3796,
+      "starsToday": 541
+    },
+    {
+      "rank": 8,
+      "fullName": "chrislgarry/Apollo-11",
+      "owner": "chrislgarry",
+      "name": "Apollo-11",
+      "url": "https://github.com/chrislgarry/Apollo-11",
+      "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+      "language": "Assembly",
+      "totalStars": 73968,
+      "forks": 8088,
+      "starsToday": 496
+    }
+  ],
+  "meta": {
+    "morluto/rea": {
+      "fullName": "morluto/rea",
+      "fetchedAt": "2026-10-11T15:10:00.720Z",
+      "topics": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli",
+        "codex",
+        "cordis",
+        "ctf",
+        "decompiler",
+        "developer-tools",
+        "disassembler",
+        "dsh",
+        "dsh-plugin",
+        "ghidra",
+        "hopper",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "reverse-engineering",
+        "static-analysis"
+      ],
+      "license": "MIT",
+      "homepage": "https://rea.tools",
+      "archived": false,
+      "pushedAt": "2026-10-11T14:58:38Z",
+      "createdAt": "2026-04-14T00:51:32Z",
+      "defaultBranch": "main"
+    },
+    "boykopovar/AnyPS5": {
+      "fullName": "boykopovar/AnyPS5",
+      "fetchedAt": "2026-10-11T15:10:00.902Z",
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "license": "GPL-2.0",
+      "homepage": "https://discord.gg/BHFztBPUe",
+      "archived": false,
+      "pushedAt": "2026-10-11T12:42:34Z",
+      "createdAt": "2026-08-03T21:30:25Z",
+      "defaultBranch": "main"
+    },
+    "storytold/artcraft": {
+      "fullName": "storytold/artcraft",
+      "fetchedAt": "2026-10-11T15:10:01.132Z",
+      "topics": [
+        "3d-graphics",
+        "ai",
+        "aivideo",
+        "filmmaking",
+        "imagegeneration"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://getartcraft.com",
+      "archived": false,
+      "pushedAt": "2026-10-11T13:47:59Z",
+      "createdAt": "2022-03-31T23:19:12Z",
+      "defaultBranch": "main"
+    },
+    "cathrynlavery/diagram-design": {
+      "fullName": "cathrynlavery/diagram-design",
+      "fetchedAt": "2026-10-11T15:10:01.364Z",
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "license": "MIT",
+      "homepage": "https://cathrynlavery.github.io/diagram-design/",
+      "archived": false,
+      "pushedAt": "2026-10-10T21:10:14Z",
+      "createdAt": "2026-04-16T18:01:16Z",
+      "defaultBranch": "main"
+    },
+    "bilawalsidhu/gods-eye-view": {
+      "fullName": "bilawalsidhu/gods-eye-view",
+      "fetchedAt": "2026-10-11T15:10:01.645Z",
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "Other",
+      "homepage": "https://maptheworld.ai/",
+      "archived": false,
+      "pushedAt": "2026-10-10T03:59:46Z",
+      "createdAt": "2026-06-22T23:37:22Z",
+      "defaultBranch": "main"
+    },
+    "pytorch/pytorch": {
+      "fullName": "pytorch/pytorch",
+      "fetchedAt": "2026-10-11T15:10:01.924Z",
+      "topics": [
+        "autograd",
+        "deep-learning",
+        "gpu",
+        "machine-learning",
+        "neural-network",
+        "numpy",
+        "python",
+        "tensor"
+      ],
+      "license": "Other",
+      "homepage": "https://pytorch.org",
+      "archived": false,
+      "pushedAt": "2026-10-11T15:04:47Z",
+      "createdAt": "2016-08-13T05:26:41Z",
+      "defaultBranch": "main"
+    },
+    "lyogavin/airllm": {
+      "fullName": "lyogavin/airllm",
+      "fetchedAt": "2026-10-11T15:10:02.201Z",
+      "topics": [
+        "chinese-llm",
+        "chinese-nlp",
+        "finetune",
+        "generative-ai",
+        "instruct-gpt",
+        "instruction-set",
+        "llama",
+        "llm",
+        "lora",
+        "open-models",
+        "open-source",
+        "open-source-models",
+        "qlora"
+      ],
+      "license": "Apache-2.0",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-10-11T06:19:49Z",
+      "createdAt": "2023-06-12T16:28:41Z",
+      "defaultBranch": "main"
+    },
+    "chrislgarry/Apollo-11": {
+      "fullName": "chrislgarry/Apollo-11",
+      "fetchedAt": "2026-10-11T15:10:02.456Z",
+      "topics": [
+        "agc",
+        "apollo",
+        "hacktoberfest",
+        "nasa"
+      ],
+      "license": "Other",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-07-15T02:29:53Z",
+      "createdAt": "2014-04-03T15:45:02Z",
+      "defaultBranch": "master"
+    }
+  },
+  "warnings": []
+}
