@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "collectedAt": "2026-10-24T11:09:51.378Z",
+  "source": {
+    "url": "https://github.com/trending?since=daily",
+    "since": "daily",
+    "parserVersion": "trending-html-2"
+  },
+  "origin": "live",
+  "repos": [
+    {
+      "rank": 1,
+      "fullName": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "totalStars": 42911,
+      "forks": 2678,
+      "starsToday": 2716
+    },
+    {
+      "rank": 2,
+      "fullName": "php/php-src",
+      "owner": "php",
+      "name": "php-src",
+      "url": "https://github.com/php/php-src",
+      "description": "The PHP Interpreter",
+      "language": "C",
+      "totalStars": 41627,
+      "forks": 8373,
+      "starsToday": 716
+    },
+    {
+      "rank": 3,
+      "fullName": "anthropics/knowledge-work-plugins",
+      "owner": "anthropics",
+      "name": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "totalStars": 32482,
+      "forks": 3587,
+      "starsToday": 635
+    },
+    {
+      "rank": 4,
+      "fullName": "NVIDIA/OpenShell",
+      "owner": "NVIDIA",
+      "name": "OpenShell",
+      "url": "https://github.com/NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "language": "Rust",
+      "totalStars": 19095,
+      "forks": 1903,
+      "starsToday": 1119
+    },
+    {
+      "rank": 5,
+      "fullName": "Renhuai123/ziwei-doushu",
+      "owner": "Renhuai123",
+      "name": "ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "language": "TypeScript",
+      "totalStars": 7159,
+      "forks": 1459,
+      "starsToday": 546
+    },
+    {
+      "rank": 6,
+      "fullName": "SnailSploit/Claude-Red",
+      "owner": "SnailSploit",
+      "name": "Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "language": "Python",
+      "totalStars": 8767,
+      "forks": 1123,
+      "starsToday": 226
+    },
+    {
+      "rank": 7,
+      "fullName": "OpenBMB/VoxCPM",
+      "owner": "OpenBMB",
+      "name": "VoxCPM",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+      "language": "Python",
+      "totalStars": 40469,
+      "forks": 4598,
+      "starsToday": 150
+    },
+    {
+      "rank": 8,
+      "fullName": "nodejs/node",
+      "owner": "nodejs",
+      "name": "node",
+      "url": "https://github.com/nodejs/node",
+      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "language": "JavaScript",
+      "totalStars": 123046,
+      "forks": 39846,
+      "starsToday": 66
+    }
+  ],
+  "meta": {
+    "cloudflare/security-audit-skill": {
+      "fullName": "cloudflare/security-audit-skill",
+      "fetchedAt": "2026-10-24T11:09:51.838Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-09-14T19:29:02Z",
+      "createdAt": "2026-06-18T14:08:44Z",
+      "defaultBranch": "main"
+    },
+    "php/php-src": {
+      "fullName": "php/php-src",
+      "fetchedAt": "2026-10-24T11:09:52.068Z",
+      "topics": [],
+      "license": "BSD-3-Clause",
+      "homepage": "https://www.php.net",
+      "archived": false,
+      "pushedAt": "2026-10-24T09:18:00Z",
+      "createdAt": "2011-06-16T01:52:25Z",
+      "defaultBranch": "master"
+    },
+    "anthropics/knowledge-work-plugins": {
+      "fullName": "anthropics/knowledge-work-plugins",
+      "fetchedAt": "2026-10-24T11:09:52.274Z",
+      "topics": [],
+      "license": "Apache-2.0",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-10-24T07:31:47Z",
+      "createdAt": "2026-01-23T20:11:54Z",
+      "defaultBranch": "main"
+    },
+    "NVIDIA/OpenShell": {
+      "fullName": "NVIDIA/OpenShell",
+      "fetchedAt": "2026-10-24T11:09:52.550Z",
+      "topics": [],
+      "license": "Apache-2.0",
+      "homepage": "https://docs.nvidia.com/openshell/latest/",
+      "archived": false,
+      "pushedAt": "2026-10-24T02:12:45Z",
+      "createdAt": "2026-02-24T22:52:22Z",
+      "defaultBranch": "main"
+    },
+    "Renhuai123/ziwei-doushu": {
+      "fullName": "Renhuai123/ziwei-doushu",
+      "fetchedAt": "2026-10-24T11:09:52.813Z",
+      "topics": [
+        "bazi",
+        "chinese-astrology",
+        "divination",
+        "fortune-telling",
+        "nextjs",
+        "open-source",
+        "purple-star-astrology",
+        "typescript",
+        "zi-wei-dou-shu",
+        "ziwei-doushu"
+      ],
+      "license": "MIT",
+      "homepage": "https://metisziwei.com/?from=gh-about",
+      "archived": false,
+      "pushedAt": "2026-10-24T02:34:09Z",
+      "createdAt": "2026-05-01T05:09:59Z",
+      "defaultBranch": "main"
+    },
+    "SnailSploit/Claude-Red": {
+      "fullName": "SnailSploit/Claude-Red",
+      "fetchedAt": "2026-10-24T11:09:53.049Z",
+      "topics": [
+        "claude-ai",
+        "claude-pt",
+        "claude-skills",
+        "redteam",
+        "redteam-tools",
+        "skills"
+      ],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-10-12T15:02:40Z",
+      "createdAt": "2026-03-04T05:52:35Z",
+      "defaultBranch": "main"
+    },
+    "OpenBMB/VoxCPM": {
+      "fullName": "OpenBMB/VoxCPM",
+      "fetchedAt": "2026-10-24T11:09:53.291Z",
+      "topics": [
+        "audio",
+        "deeplearning",
+        "minicpm",
+        "multilingual",
+        "python",
+        "pytorch",
+        "speech",
+        "speech-synthesis",
+        "text-to-speech",
+        "tts",
+        "tts-model",
+        "voice-cloning",
+        "voice-design",
+        "voxcpm"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://voxcpm.com",
+      "archived": false,
+      "pushedAt": "2026-10-08T03:26:41Z",
+      "createdAt": "2025-09-16T03:41:49Z",
+      "defaultBranch": "main"
+    },
+    "nodejs/node": {
+      "fullName": "nodejs/node",
+      "fetchedAt": "2026-10-24T11:09:53.503Z",
+      "topics": [
+        "javascript",
+        "js",
+        "linux",
+        "macos",
+        "mit",
+        "node",
+        "nodejs",
+        "runtime",
+        "windows"
+      ],
+      "license": "Other",
+      "homepage": "https://nodejs.org",
+      "archived": false,
+      "pushedAt": "2026-10-24T06:59:21Z",
+      "createdAt": "2014-11-26T19:57:11Z",
+      "defaultBranch": "main"
+    }
+  },
+  "warnings": []
+}
