@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "collectedAt": "2026-10-27T12:20:00.765Z",
+  "source": {
+    "url": "https://github.com/trending?since=daily",
+    "since": "daily",
+    "parserVersion": "trending-html-2"
+  },
+  "origin": "live",
+  "repos": [
+    {
+      "rank": 1,
+      "fullName": "Nutlope/hallmark",
+      "owner": "Nutlope",
+      "name": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "totalStars": 37914,
+      "forks": 1972,
+      "starsToday": 2859
+    },
+    {
+      "rank": 2,
+      "fullName": "nightly-labs/openbot",
+      "owner": "nightly-labs",
+      "name": "openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "language": "TypeScript",
+      "totalStars": 1887,
+      "forks": 215,
+      "starsToday": 794
+    },
+    {
+      "rank": 3,
+      "fullName": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "totalStars": 305919,
+      "forks": 27249,
+      "starsToday": 608
+    },
+    {
+      "rank": 4,
+      "fullName": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "totalStars": 89869,
+      "forks": 5342,
+      "starsToday": 1458
+    },
+    {
+      "rank": 5,
+      "fullName": "makecindy/cindy",
+      "owner": "makecindy",
+      "name": "cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "totalStars": 7131,
+      "forks": 855,
+      "starsToday": 1446
+    },
+    {
+      "rank": 6,
+      "fullName": "gitroomhq/postiz-app",
+      "owner": "gitroomhq",
+      "name": "postiz-app",
+      "url": "https://github.com/gitroomhq/postiz-app",
+      "description": "📨 The ultimate agentic social media scheduling tool 🤖",
+      "language": "TypeScript",
+      "totalStars": 38884,
+      "forks": 7473,
+      "starsToday": 953
+    },
+    {
+      "rank": 7,
+      "fullName": "affaan-m/ECC",
+      "owner": "affaan-m",
+      "name": "ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "totalStars": 290359,
+      "forks": 43018,
+      "starsToday": 1183
+    },
+    {
+      "rank": 8,
+      "fullName": "HKUDS/DeepTutor",
+      "owner": "HKUDS",
+      "name": "DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "totalStars": 44884,
+      "forks": 5671,
+      "starsToday": 1587
+    },
+    {
+      "rank": 9,
+      "fullName": "JetBrains/thinkrail",
+      "owner": "JetBrains",
+      "name": "thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "totalStars": 3507,
+      "forks": 184,
+      "starsToday": 1211
+    },
+    {
+      "rank": 10,
+      "fullName": "togg53192-cmd/jailbreaks",
+      "owner": "togg53192-cmd",
+      "name": "jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "language": null,
+      "totalStars": 4892,
+      "forks": 781,
+      "starsToday": 890
+    }
+  ],
+  "meta": {
+    "Nutlope/hallmark": {
+      "fullName": "Nutlope/hallmark",
+      "fetchedAt": "2026-10-27T12:20:01.311Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": "https://www.usehallmark.com/",
+      "archived": false,
+      "pushedAt": "2026-10-27T11:19:54Z",
+      "createdAt": "2026-04-27T20:47:10Z",
+      "defaultBranch": "main"
+    },
+    "nightly-labs/openbot": {
+      "fullName": "nightly-labs/openbot",
+      "fetchedAt": "2026-10-27T12:20:01.641Z",
+      "topics": [
+        "ai-agents",
+        "bun",
+        "codex",
+        "electron",
+        "local-first",
+        "macos",
+        "solidjs",
+        "typescript"
+      ],
+      "license": "Other",
+      "homepage": "https://openbot.run/",
+      "archived": false,
+      "pushedAt": "2026-10-27T12:18:45Z",
+      "createdAt": "2026-08-12T21:32:03Z",
+      "defaultBranch": "main"
+    },
+    "obra/superpowers": {
+      "fullName": "obra/superpowers",
+      "fetchedAt": "2026-10-27T12:20:01.911Z",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-10-23T03:48:57Z",
+      "createdAt": "2025-10-09T19:45:18Z",
+      "defaultBranch": "main"
+    },
+    "pbakaus/impeccable": {
+      "fullName": "pbakaus/impeccable",
+      "fetchedAt": "2026-10-27T12:20:02.134Z",
+      "topics": [],
+      "license": "Apache-2.0",
+      "homepage": "https://impeccable.style",
+      "archived": false,
+      "pushedAt": "2026-10-27T08:28:52Z",
+      "createdAt": "2025-11-16T01:52:04Z",
+      "defaultBranch": "main"
+    },
+    "makecindy/cindy": {
+      "fullName": "makecindy/cindy",
+      "fetchedAt": "2026-10-27T12:20:02.473Z",
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios",
+        "llm",
+        "macos",
+        "react-native",
+        "typescript",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://cindy.app",
+      "archived": false,
+      "pushedAt": "2026-10-27T12:12:26Z",
+      "createdAt": "2026-07-22T17:49:34Z",
+      "defaultBranch": "main"
+    },
+    "gitroomhq/postiz-app": {
+      "fullName": "gitroomhq/postiz-app",
+      "fetchedAt": "2026-10-27T12:20:02.808Z",
+      "topics": [
+        "nextjs",
+        "open-source",
+        "open-source-social-media-scheduling-tool",
+        "oss",
+        "postiz-cloud",
+        "postiz-hosted",
+        "redis",
+        "scheduling-tool",
+        "social-media-scheduling-tool",
+        "typescript"
+      ],
+      "license": "AGPL-3.0",
+      "homepage": "https://postiz.com",
+      "archived": false,
+      "pushedAt": "2026-10-24T18:27:21Z",
+      "createdAt": "2023-07-08T17:24:22Z",
+      "defaultBranch": "main"
+    },
+    "affaan-m/ECC": {
+      "fullName": "affaan-m/ECC",
+      "fetchedAt": "2026-10-27T12:20:03.093Z",
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "license": "MIT",
+      "homepage": "https://ecc.tools",
+      "archived": false,
+      "pushedAt": "2026-10-26T04:56:56Z",
+      "createdAt": "2026-01-18T00:51:51Z",
+      "defaultBranch": "main"
+    },
+    "HKUDS/DeepTutor": {
+      "fullName": "HKUDS/DeepTutor",
+      "fetchedAt": "2026-10-27T12:20:03.345Z",
+      "topics": [
+        "ai-agents",
+        "ai-tutor",
+        "clawbot",
+        "cli-tool",
+        "deepresearch",
+        "interactive-learning",
+        "learning",
+        "multi-agent-systems",
+        "rag"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "http://arxiv.org/abs/2604.26962",
+      "archived": false,
+      "pushedAt": "2026-10-27T09:59:28Z",
+      "createdAt": "2025-12-28T15:35:54Z",
+      "defaultBranch": "main"
+    },
+    "JetBrains/thinkrail": {
+      "fullName": "JetBrains/thinkrail",
+      "fetchedAt": "2026-10-27T12:20:03.628Z",
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension",
+        "spec-driven",
+        "spec-driven-coding",
+        "spec-driven-development",
+        "vibe-coding",
+        "vibecoding"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://thinkrail.ai/",
+      "archived": false,
+      "pushedAt": "2026-10-27T12:05:16Z",
+      "createdAt": "2026-07-08T07:40:43Z",
+      "defaultBranch": "main"
+    },
+    "togg53192-cmd/jailbreaks": {
+      "fullName": "togg53192-cmd/jailbreaks",
+      "fetchedAt": "2026-10-27T12:20:03.873Z",
+      "topics": [],
+      "license": null,
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-10-25T15:21:20Z",
+      "createdAt": "2026-06-18T18:21:25Z",
+      "defaultBranch": "main"
+    }
+  },
+  "warnings": []
+}
