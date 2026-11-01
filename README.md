@@ -76,7 +76,7 @@ tests/             vitest suites
 ```bash
 npm install
 npm run dev          # website on http://localhost:5173 (reads public/feed)
-npm test             # 55 tests
+npm test             # 65 tests
 npm run typecheck
 npm run build        # builds feed (data/ or, if empty, fixtures) + website into dist/
 
@@ -91,9 +91,9 @@ npm run daily        # locked pipeline: collect → summarise → feed → notif
 ## Safety design
 
 - **Untrusted repository content.** Repository code is never cloned, installed or run. Only Trending HTML and the GitHub REST API (metadata and README) are read. Descriptions are plain text, React escapes everything, and links are limited to http(s) with `rel="noopener noreferrer nofollow"`.
-- **README → model.** Before the README goes to a model, HTML comments, scripts, invisible characters and base64 blobs are removed. The text is truncated and wrapped in `<untrusted_readme>` delimiters that it cannot close itself.
+- **README → model.** Before the README goes to a model, HTML comments, scripts, invisible characters and base64 blobs are removed. The text is truncated to `maxReadmeChars` and wrapped in `<untrusted_readme>` delimiters that it cannot close itself. A README larger than the GitHub client's byte cap is truncated to that cap (and then to the character budget) instead of failing the repo. Files above GitHub's 1 MB inline limit are still refused.
 - **Model output validation.** Output must be strict JSON matching a fixed schema (no extra keys, length limits). It is rejected if it contains HTML or any URL outside the allow-list (repo, README, homepage). Technologies are kept only if they literally appear in the source. Invalid output is never cached, and the previous good note stays.
-- **Budget.** Notes are generated only for selected repos (today's rule matches plus `summaries.selected`). There is a hard limit of `maxPerRun` model calls, and failures count too. Output tokens and README characters are capped. Gemini counts thinking tokens towards `maxOutputTokens` (3000). Notes are cached by repo + README SHA + prompt version + model.
+- **Budget.** Notes are generated only for selected repos (today's rule matches plus `summaries.selected`). There is a hard limit of `maxPerRun` model calls, and a failure after retries still counts as one. Output tokens and README characters are capped. Gemini counts thinking tokens towards `maxOutputTokens` (3000), so requests send `reasoning_effort: low` (the lowest level Gemini 3.8 Flash accepts). Each call waits up to `timeoutMs` (120s) and retries HTTP 429, 503, and timeouts up to `maxAttempts` (3) with backoff. Those retries stay inside the same budget slot. Notes are cached by repo + README SHA + prompt version + model.
 - **Reruns and overlap.** One snapshot per UTC date, so a rerun is a no-op. Writes are atomic (temp file + rename). Overlap is blocked by the workflow `concurrency` group plus a file lock with stale-lock recovery.
 - **Notifications.** At most once per snapshot: `sending` is saved before the API call, so an interrupted run never resends. Only a confirmed send starts the 7-day cooldown. There are no digests about stale data. Plain text only (no Telegram parse mode), and the token is redacted from errors. A corrupt state file stops delivery rather than risking duplicates.
 - **Frontend.** No secrets or delivery state are bundled (checked by a test). `vercel.json` sets a strict CSP (hash-pinned inline script; also test-checked), `nosniff`, a referrer policy and a permissions policy.
@@ -111,12 +111,12 @@ AI, developer tools, automation or web development · at least 100 displayed sta
 | Repo variables `REPORADAR_GIT_NAME`, `REPORADAR_GIT_EMAIL` | Commit as **you**, so Vercel Hobby deploys private-repo commits | Free | Settings → Secrets and variables → Actions → Variables. Use your GitHub noreply email |
 | Vercel account + project linked to the repo | Hosting | Hobby is free (personal, non-commercial) | Import repo; framework Vite; settings come from `vercel.json`. No env vars needed |
 | Telegram bot via @BotFather + your chat ID | Daily digest | Free | Secrets `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`; variable `REPORADAR_SEND=true`; set `"enabled": true` |
-| Gemini API key (Google AI Studio) | Learning notes | **Paid per use** (capped by `maxPerRun`) | Secret `LLM_API_KEY`. Repository variables `LLM_BASE_URL` = `https://generativelanguage.googleapis.com/v1beta/openai` and `LLM_MODEL` = `gemini-3.8-flash`. Summaries are already enabled; if the secret does not exist yet, the daily run skips them and still succeeds |
+| Gemini API key (Google AI Studio) | Learning notes | **Paid per use** (capped by `maxPerRun`) | Secret `LLM_API_KEY`. Repository variables `LLM_BASE_URL` = `https://generativelanguage.googleapis.com/v1beta/openai` and `LLM_MODEL` = `gemini-3.8-flash`. Optional `LLM_REASONING_EFFORT` (`low` by default, or `off`). Timeout and retries are `summaries.timeoutMs` and `summaries.maxAttempts` in `config/collector.json`. If the secret does not exist yet, the daily run skips summaries and still succeeds |
 
 Notes:
 
 - Vercel Hobby blocks deployments of private-repo commits whose author isn't the account owner. That's why the workflow commits with your identity. A public repo avoids this, but then the `ops-state` branch (notified repo names and times) is public too.
-- GitHub Actions on a private repo uses free minutes. The daily job takes about 2 minutes (around 60 minutes a month).
+- GitHub Actions on a private repo uses free minutes. Collection itself is short. With summaries enabled, a slow Gemini day can take several minutes; the workflow allows 25.
 - GitHub may delay scheduled runs at busy times. Timestamps always show when collection actually happened.
 
 ## Suggested next steps (each needs your go-ahead)

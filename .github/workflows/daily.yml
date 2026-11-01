@@ -22,7 +22,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25 # 3 summary attempts × 120s × maxPerRun 3, plus collection
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }

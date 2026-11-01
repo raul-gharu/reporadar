@@ -1,6 +1,6 @@
 import { z } from "zod";
 import type { RepoMeta } from "../../shared/schema.js";
-import { fetchWithTimeout } from "./util.js";
+import { fetchWithTimeout, log } from "./util.js";
 
 /**
  * Minimal GitHub REST client. Reads metadata and README text only.
@@ -9,6 +9,8 @@ import { fetchWithTimeout } from "./util.js";
 export type Fetcher = (url: string, init?: RequestInit & { timeoutMs?: number }) => Promise<Response>;
 
 const API = "https://api.github.com";
+/** GitHub's contents API only inlines files up to 1 MB. Larger bodies are not decoded. */
+const README_DECODE_LIMIT = 1_000_000;
 
 const RepoApiSchema = z.object({
   full_name: z.string(),
@@ -72,14 +74,24 @@ export function githubClient(opts: GitHubClientOptions) {
       };
     },
 
-    /** README as plain text, capped to `maxBytes` before decoding is used. */
+    /**
+     * README as plain text. Files within GitHub's 1 MB inline limit are decoded
+     * and then truncated to `maxBytes`. The returned SHA is still the full file,
+     * so the summary cache notices later edits. The caller applies a tighter
+     * character budget before any text reaches a model.
+     */
     async readme(fullName: string, maxBytes = 200_000): Promise<{ text: string; sha: string; htmlUrl: string } | null> {
       const raw = await getJson(`/repos/${fullName}/readme`);
       if (!raw) return null;
       const r = ReadmeApiSchema.parse(raw);
       if (r.encoding !== "base64") throw new Error(`Unexpected README encoding ${r.encoding}`);
-      if (r.size > maxBytes) throw new Error(`README too large (${r.size} bytes)`);
-      return { text: Buffer.from(r.content, "base64").toString("utf8"), sha: r.sha, htmlUrl: r.html_url };
+      if (r.size > README_DECODE_LIMIT || r.content.length > 1_400_000) {
+        throw new Error(`README too large to decode (${r.size} bytes)`);
+      }
+      const buf = Buffer.from(r.content, "base64");
+      const sliced = buf.byteLength > maxBytes ? buf.subarray(0, maxBytes) : buf;
+      if (buf.byteLength > maxBytes) log.info(`Truncated README for ${fullName} from ${buf.byteLength} bytes to ${maxBytes}.`);
+      return { text: sliced.toString("utf8"), sha: r.sha, htmlUrl: r.html_url };
     },
   };
 }

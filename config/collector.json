@@ -14,6 +14,8 @@
     "maxPerRun": 3,
     "maxReadmeChars": 12000,
     "maxOutputTokens": 3000,
+    "timeoutMs": 120000,
+    "maxAttempts": 3,
     "promptVersion": "learn-v1",
     "selected": []
   }

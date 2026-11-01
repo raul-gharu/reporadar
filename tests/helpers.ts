@@ -19,7 +19,7 @@ export const collectorConfig: CollectorConfig = {
   historyDaysInFeed: 30,
   lockStaleAfterMinutes: 30,
   enrichWithGitHubApi: false,
-  summaries: { enabled: true, maxPerRun: 2, maxReadmeChars: 5000, maxOutputTokens: 500, promptVersion: "t1", selected: [] },
+  summaries: { enabled: true, maxPerRun: 2, maxReadmeChars: 5000, maxOutputTokens: 500, timeoutMs: 30_000, maxAttempts: 3, promptVersion: "t1", selected: [] },
 };
 
 export const notificationConfig: NotificationConfig = {
