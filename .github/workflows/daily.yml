@@ -50,7 +50,7 @@ jobs:
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}           # automatic; read-only API use
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}             # optional; summaries stay off without it
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}             # optional; an unset secret skips summaries and the job still succeeds
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }} # optional
