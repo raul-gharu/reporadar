@@ -6,7 +6,7 @@ import { githubClient } from "./github.js";
 import { withLock, LockHeldError } from "./lock.js";
 import { runNotify } from "./notify.js";
 import { listSnapshots } from "./store.js";
-import { llmFromEnv, runSummaries } from "./summarise.js";
+import { llmForRun, runSummaries } from "./summarise.js";
 import { generateFixtures } from "./fixtures.js";
 import { log } from "./util.js";
 
@@ -52,7 +52,7 @@ async function main() {
     case "summarise": {
       const built = await buildFeed({ paths, ...configs });
       if (!built) return;
-      log.info(JSON.stringify(await runSummaries({ paths, config: configs.collector, repos: built.latest.repos, github: gh, llm: llmFromEnv() })));
+      log.info(JSON.stringify(await runSummaries({ paths, config: configs.collector, repos: built.latest.repos, github: gh, llm: llmForRun(process.env, configs.collector.summaries) })));
       await buildFeed({ paths, ...configs });
       return;
     }
@@ -69,7 +69,7 @@ async function main() {
         const c = await collectOnce({ paths, config: configs.collector, github: gh });
         if (c.status !== "failed") {
           const pre = await buildFeed({ paths, ...configs });
-          if (pre) log.info("summaries:", JSON.stringify(await runSummaries({ paths, config: configs.collector, repos: pre.latest.repos, github: gh, llm: llmFromEnv() })));
+          if (pre) log.info("summaries:", JSON.stringify(await runSummaries({ paths, config: configs.collector, repos: pre.latest.repos, github: gh, llm: llmForRun(process.env, configs.collector.summaries) })));
         }
         // Always rebuild: on failure this keeps the last good data and surfaces the failed run.
         const built = await buildFeed({ paths, ...configs });

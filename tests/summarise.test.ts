@@ -1,6 +1,6 @@
 import { readdir } from "node:fs/promises";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { buildUserPrompt, llmFromEnv, runSummaries, sanitiseReadme, validateSummaryOutput, type LlmClient } from "../collector/src/summarise.js";
+import { buildUserPrompt, llmForRun, llmFromEnv, llmRetryDelayMs, runSummaries, sanitiseReadme, validateSummaryOutput, type LlmClient } from "../collector/src/summarise.js";
 import type { GitHubClient } from "../collector/src/github.js";
 import type { FeedRepo } from "../shared/schema.js";
 import { collectorConfig, repo, tmpPaths } from "./helpers.js";
@@ -96,6 +96,30 @@ describe("runSummaries", () => {
     expect((await runSummaries({ paths, config: { ...collectorConfig, summaries: { ...collectorConfig.summaries, enabled: false } }, repos: [fr("a/one")], github: gh, llm: llm(() => "") })).reason).toMatch(/disabled/);
   });
 
+  it("counts a retried generation as one budget slot", async () => {
+    let n = 0;
+    vi.stubGlobal("fetch", vi.fn(async () => {
+      n++;
+      if (n === 1) return new Response("busy", { status: 503, headers: { "retry-after": "0" } });
+      const name = n === 2 ? "a/one" : "a/two";
+      return new Response(JSON.stringify({ choices: [{ message: { content: validFor(name) } }] }), { status: 200 });
+    }));
+    try {
+      const client = llmFromEnv(
+        { LLM_API_KEY: "k", LLM_BASE_URL: "https://example.invalid/v1", LLM_MODEL: "m" },
+        { sleep: async () => {}, maxAttempts: 3 },
+      );
+      const paths = await tmpPaths();
+      const r = await runSummaries({ paths, config: collectorConfig, repos: [fr("a/one"), fr("a/two"), fr("a/three")], github: gh, llm: client });
+      expect(r.generated).toEqual(["a/one", "a/two"]);
+      expect(r.failed).toEqual([]);
+      expect(r.skippedBudget).toEqual(["a/three"]);
+      expect(n).toBe(3);
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
+
   it("skips when summaries are enabled but the Actions secret is missing or empty", async () => {
     const paths = await tmpPaths();
     for (const env of [{}, { LLM_API_KEY: "" }]) {
@@ -133,15 +157,89 @@ describe("llmFromEnv Gemini OpenAI-compatible request", () => {
     expect(url).toBe("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions");
     expect(init.method).toBe("POST");
     expect(init.headers).toMatchObject({ Authorization: "Bearer test-key", "Content-Type": "application/json" });
+    expect((init as RequestInit & { timeoutMs?: number }).timeoutMs).toBe(120_000);
     expect(JSON.parse(String(init.body))).toEqual({
       model: "gemini-3.8-flash",
       max_tokens: 3000,
       temperature: 0.2,
+      reasoning_effort: "low",
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: "system prompt" },
         { role: "user", content: "user prompt" },
       ],
     });
+  });
+
+  it("omits reasoning_effort for a non-Gemini model unless asked", async () => {
+    const fetchMock = vi.fn(async (_url: string, _init?: RequestInit) => new Response(JSON.stringify({
+      choices: [{ message: { content: "ok" } }],
+    }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const client = llmFromEnv({ LLM_API_KEY: "k", LLM_BASE_URL: "https://api.openai.com/v1", LLM_MODEL: "gpt-4o-mini" });
+    await client!.complete("s", "u", 100);
+    const body = JSON.parse(String(fetchMock.mock.calls[0][1]?.body));
+    expect(body.reasoning_effort).toBeUndefined();
+  });
+
+  it("uses the configured timeout", async () => {
+    const fetchMock = vi.fn(async (_url: string, _init?: RequestInit & { timeoutMs?: number }) => new Response(JSON.stringify({
+      choices: [{ message: { content: "ok" } }],
+    }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const client = llmForRun(
+      { LLM_API_KEY: "k", LLM_MODEL: "gemini-3.8-flash", LLM_BASE_URL: "https://generativelanguage.googleapis.com/v1beta/openai" },
+      { ...collectorConfig.summaries, timeoutMs: 90_000, maxAttempts: 3 },
+    );
+    await client!.complete("s", "u", 100);
+    expect(fetchMock.mock.calls[0][1]?.timeoutMs).toBe(90_000);
+  });
+
+  it.each([503, 429])("retries HTTP %s and then reads the completion", async (status) => {
+    const fetchMock = vi.fn()
+      .mockResolvedValueOnce(new Response("busy", { status, headers: { "retry-after": "0" } }))
+      .mockResolvedValueOnce(new Response(JSON.stringify({ choices: [{ message: { content: "{\"ok\":true}" } }] }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const client = llmFromEnv(
+      { LLM_API_KEY: "k", LLM_BASE_URL: "https://generativelanguage.googleapis.com/v1beta/openai", LLM_MODEL: "gemini-3.8-flash" },
+      { sleep: async () => {} },
+    );
+    await expect(client!.complete("s", "u", 100)).resolves.toBe("{\"ok\":true}");
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it("retries an aborted request and reports a timeout once attempts are exhausted", async () => {
+    const fetchMock = vi.fn(async () => {
+      const error = new Error("This operation was aborted");
+      error.name = "AbortError";
+      throw error;
+    });
+    vi.stubGlobal("fetch", fetchMock);
+    const client = llmFromEnv(
+      { LLM_API_KEY: "k", LLM_BASE_URL: "https://generativelanguage.googleapis.com/v1beta/openai", LLM_MODEL: "gemini-3.8-flash" },
+      { timeoutMs: 120_000, maxAttempts: 3, sleep: async () => {} },
+    );
+    await expect(client!.complete("s", "u", 100)).rejects.toThrow(/timed out after 120000ms/);
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+  });
+
+  it("does not retry a non-transient HTTP error", async () => {
+    const fetchMock = vi.fn(async () => new Response("no", { status: 400 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const client = llmFromEnv(
+      { LLM_API_KEY: "k", LLM_MODEL: "gemini-3.8-flash", LLM_BASE_URL: "https://generativelanguage.googleapis.com/v1beta/openai" },
+      { sleep: async () => {} },
+    );
+    await expect(client!.complete("s", "u", 100)).rejects.toThrow(/LLM HTTP 400/);
+    expect(fetchMock).toHaveBeenCalledOnce();
+  });
+});
+
+describe("llm retry delay", () => {
+  it("backs off exponentially and honours a short Retry-After", () => {
+    expect(llmRetryDelayMs(1, null)).toBe(2_000);
+    expect(llmRetryDelayMs(2, null)).toBe(4_000);
+    expect(llmRetryDelayMs(1, "3")).toBe(3_000);
+    expect(llmRetryDelayMs(1, "120")).toBe(15_000);
   });
 });

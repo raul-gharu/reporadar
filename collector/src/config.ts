@@ -22,6 +22,8 @@ export const CollectorConfigSchema = z.object({
     maxPerRun: z.number().int().min(0).max(20),
     maxReadmeChars: z.number().int().positive().max(50000),
     maxOutputTokens: z.number().int().positive().max(4000),
+    timeoutMs: z.number().int().min(1000).max(180_000),
+    maxAttempts: z.number().int().min(1).max(3),
     promptVersion: z.string(),
     selected: z.array(z.string()),
   }),

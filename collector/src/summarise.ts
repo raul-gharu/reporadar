@@ -134,36 +134,108 @@ export interface LlmClient {
   complete(system: string, user: string, maxTokens: number): Promise<string>;
 }
 
-export function llmFromEnv(env = process.env): LlmClient | null {
+export interface LlmCallOptions {
+  timeoutMs?: number;
+  maxAttempts?: number;
+  sleep?: (ms: number) => Promise<void>;
+}
+
+const DEFAULT_TIMEOUT_MS = 120_000;
+const DEFAULT_MAX_ATTEMPTS = 3;
+const RETRY_DELAY_CAP_MS = 15_000;
+
+/** Delay before another attempt. `attempt` is the 1-based attempt that just failed. */
+export function llmRetryDelayMs(attempt: number, retryAfter: string | null, now = Date.now()): number {
+  const exponential = Math.min(RETRY_DELAY_CAP_MS, 1_000 * 2 ** attempt);
+  const header = retryAfter?.trim();
+  if (!header) return exponential;
+  const seconds = Number(header);
+  if (Number.isFinite(seconds) && seconds >= 0) return Math.min(RETRY_DELAY_CAP_MS, Math.round(seconds * 1000));
+  const when = Date.parse(header);
+  if (!Number.isNaN(when)) return Math.min(RETRY_DELAY_CAP_MS, Math.max(0, when - now));
+  return exponential;
+}
+
+function isAbortError(error: unknown): boolean {
+  return !!error && typeof error === "object" && (error as { name?: string }).name === "AbortError";
+}
+
+/**
+ * Gemini 3.8 Flash defaults to medium thinking, which is slow and spends the
+ * output-token budget before any JSON is produced. `low` is the lowest level
+ * that model accepts (`minimal` is rejected). Other providers omit the field
+ * unless LLM_REASONING_EFFORT is set. `off` or `none` leaves it unset.
+ */
+function reasoningEffort(env: NodeJS.ProcessEnv, base: string, model: string): string | undefined {
+  const raw = env.LLM_REASONING_EFFORT?.trim();
+  if (raw && /^(off|none)$/i.test(raw)) return undefined;
+  if (raw) return raw;
+  if (/generativelanguage\.googleapis\.com/i.test(base) || /^gemini-/i.test(model)) return "low";
+  return undefined;
+}
+
+const defaultSleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
+
+export function llmFromEnv(env: NodeJS.ProcessEnv = process.env, opts: LlmCallOptions = {}): LlmClient | null {
   const key = env.LLM_API_KEY;
   if (!key) return null;
   const base = (env.LLM_BASE_URL || "https://api.openai.com/v1").replace(/\/$/, "");
   const model = env.LLM_MODEL || "gpt-4o-mini";
+  const timeoutMs = opts.timeoutMs ?? DEFAULT_TIMEOUT_MS;
+  const maxAttempts = opts.maxAttempts ?? DEFAULT_MAX_ATTEMPTS;
+  const sleep = opts.sleep ?? defaultSleep;
+  const effort = reasoningEffort(env, base, model);
   return {
     model,
     async complete(system, user, maxTokens) {
-      const res = await fetchWithTimeout(`${base}/chat/completions`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
-        body: JSON.stringify({
-          model,
-          max_tokens: maxTokens,
-          temperature: 0.2,
-          response_format: { type: "json_object" },
-          messages: [
-            { role: "system", content: system },
-            { role: "user", content: user },
-          ],
-        }),
-        timeoutMs: 60000,
-      });
-      if (!res.ok) throw new Error(`LLM HTTP ${res.status}`);
-      const body: any = await res.json();
-      const text = body?.choices?.[0]?.message?.content;
-      if (typeof text !== "string") throw new Error("LLM response had no message content");
-      return text;
+      const payload: Record<string, unknown> = {
+        model,
+        max_tokens: maxTokens,
+        temperature: 0.2,
+        response_format: { type: "json_object" },
+        messages: [
+          { role: "system", content: system },
+          { role: "user", content: user },
+        ],
+      };
+      if (effort) payload.reasoning_effort = effort;
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        try {
+          const res = await fetchWithTimeout(`${base}/chat/completions`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+            body: JSON.stringify(payload),
+            timeoutMs,
+          });
+          if (!res.ok) {
+            if ((res.status === 429 || res.status === 503) && attempt < maxAttempts) {
+              log.warn(`LLM HTTP ${res.status}; retrying attempt ${attempt + 1} of ${maxAttempts}`);
+              await sleep(llmRetryDelayMs(attempt, res.headers.get("retry-after")));
+              continue;
+            }
+            throw new Error(`LLM HTTP ${res.status}`);
+          }
+          const body: any = await res.json();
+          const text = body?.choices?.[0]?.message?.content;
+          if (typeof text !== "string") throw new Error("LLM response had no message content");
+          return text;
+        } catch (error) {
+          if (isAbortError(error) && attempt < maxAttempts) {
+            log.warn(`LLM request timed out; retrying attempt ${attempt + 1} of ${maxAttempts}`);
+            await sleep(llmRetryDelayMs(attempt, null));
+            continue;
+          }
+          if (isAbortError(error)) throw new Error(`LLM request timed out after ${timeoutMs}ms`);
+          throw error;
+        }
+      }
+      throw new Error("LLM request failed");
     },
   };
+}
+
+export function llmForRun(env: NodeJS.ProcessEnv, summaries: Pick<CollectorConfig["summaries"], "timeoutMs" | "maxAttempts">): LlmClient | null {
+  return llmFromEnv(env, { timeoutMs: summaries.timeoutMs, maxAttempts: summaries.maxAttempts });
 }
 
 export const cacheKeyFor = (fullName: string, readmeSha: string | null, promptVersion: string, model: string) =>
@@ -174,8 +246,10 @@ export const summaryFile = (paths: Paths, fullName: string) =>
 
 /**
  * Generate summaries for SELECTED repositories only (config list + today's
- * rule matches), within a hard per-run budget. Every model call counts toward
- * the budget, including failures, so a misbehaving model cannot burn money.
+ * rule matches), within a hard per-run budget. Each repository that reaches
+ * the model counts as one call, including a failure after retries, so a
+ * misbehaving model cannot burn the run's quota. Transient HTTP 429/503
+ * responses and timeouts are retried inside that single slot.
  */
 export async function runSummaries(o: {
   paths: Paths;

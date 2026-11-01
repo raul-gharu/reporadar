@@ -10,6 +10,8 @@ describe("project configuration", () => {
     expect(c.notifications.enabled).toBe(false);
     expect(c.collector.summaries.enabled).toBe(true);
     expect(c.collector.summaries.maxOutputTokens).toBe(3000);
+    expect(c.collector.summaries.timeoutMs).toBe(120_000);
+    expect(c.collector.summaries.maxAttempts).toBe(3);
     expect(c.notifications.rule).toEqual({ categories: ["ai", "devtools", "automation", "webdev"], minDisplayedStarsToday: 100, cooldownDays: 7, maxPerDigest: 3 });
   });
 
