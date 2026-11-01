@@ -5,10 +5,11 @@ import { describe, expect, it } from "vitest";
 import { loadConfigs } from "../collector/src/config.js";
 
 describe("project configuration", () => {
-  it("config files are valid and keep risky features off by default", async () => {
+  it("config files are valid, notifications stay off, and summaries stay within schema caps", async () => {
     const c = await loadConfigs();
     expect(c.notifications.enabled).toBe(false);
-    expect(c.collector.summaries.enabled).toBe(false);
+    expect(c.collector.summaries.enabled).toBe(true);
+    expect(c.collector.summaries.maxOutputTokens).toBe(3000);
     expect(c.notifications.rule).toEqual({ categories: ["ai", "devtools", "automation", "webdev"], minDisplayedStarsToday: 100, cooldownDays: 7, maxPerDigest: 3 });
   });
 

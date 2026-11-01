@@ -1,6 +1,6 @@
 import { readdir } from "node:fs/promises";
-import { describe, expect, it } from "vitest";
-import { buildUserPrompt, runSummaries, sanitiseReadme, validateSummaryOutput, type LlmClient } from "../collector/src/summarise.js";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { buildUserPrompt, llmFromEnv, runSummaries, sanitiseReadme, validateSummaryOutput, type LlmClient } from "../collector/src/summarise.js";
 import type { GitHubClient } from "../collector/src/github.js";
 import type { FeedRepo } from "../shared/schema.js";
 import { collectorConfig, repo, tmpPaths } from "./helpers.js";
@@ -94,5 +94,54 @@ describe("runSummaries", () => {
     const paths = await tmpPaths();
     expect((await runSummaries({ paths, config: collectorConfig, repos: [fr("a/one")], github: gh, llm: null })).reason).toMatch(/LLM_API_KEY/);
     expect((await runSummaries({ paths, config: { ...collectorConfig, summaries: { ...collectorConfig.summaries, enabled: false } }, repos: [fr("a/one")], github: gh, llm: llm(() => "") })).reason).toMatch(/disabled/);
+  });
+
+  it("skips when summaries are enabled but the Actions secret is missing or empty", async () => {
+    const paths = await tmpPaths();
+    for (const env of [{}, { LLM_API_KEY: "" }]) {
+      const r = await runSummaries({ paths, config: collectorConfig, repos: [fr("a/one")], github: gh, llm: llmFromEnv(env) });
+      expect(r.reason).toMatch(/LLM_API_KEY/);
+      expect(r.failed).toEqual([]);
+      expect(r.generated).toEqual([]);
+    }
+  });
+});
+
+describe("llmFromEnv Gemini OpenAI-compatible request", () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it("returns no client when LLM_API_KEY is unset or blank", () => {
+    expect(llmFromEnv({})).toBeNull();
+    expect(llmFromEnv({ LLM_API_KEY: "" })).toBeNull();
+  });
+
+  it("posts json_object chat completions to the Gemini base URL and reads string content", async () => {
+    const fetchMock = vi.fn(async (_url: string, _init?: RequestInit) => new Response(JSON.stringify({
+      choices: [{ message: { role: "assistant", content: "{\"whatItDoes\":\"A toolkit.\"}" } }],
+    }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+    const client = llmFromEnv({
+      LLM_API_KEY: "test-key",
+      LLM_BASE_URL: "https://generativelanguage.googleapis.com/v1beta/openai/",
+      LLM_MODEL: "gemini-3.8-flash",
+    });
+    expect(client?.model).toBe("gemini-3.8-flash");
+    await expect(client!.complete("system prompt", "user prompt", 3000)).resolves.toBe("{\"whatItDoes\":\"A toolkit.\"}");
+    expect(fetchMock).toHaveBeenCalledOnce();
+    const [url, init] = fetchMock.mock.calls[0];
+    if (!init) throw new Error("missing request init");
+    expect(url).toBe("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions");
+    expect(init.method).toBe("POST");
+    expect(init.headers).toMatchObject({ Authorization: "Bearer test-key", "Content-Type": "application/json" });
+    expect(JSON.parse(String(init.body))).toEqual({
+      model: "gemini-3.8-flash",
+      max_tokens: 3000,
+      temperature: 0.2,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: "system prompt" },
+        { role: "user", content: "user prompt" },
+      ],
+    });
   });
 });
