@@ -190,5 +190,13 @@
     "status": "success",
     "date": "2026-11-02",
     "message": "Collected 17 repositories."
+  },
+  {
+    "runId": "2026-11-02T16:05:58.363Z-2613",
+    "startedAt": "2026-11-02T16:05:58.363Z",
+    "finishedAt": "2026-11-02T16:05:58.385Z",
+    "status": "skipped",
+    "date": "2026-11-02",
+    "message": "Snapshot for 2026-11-02 already collected at 2026-11-02T08:36:11.877Z; nothing to do."
   }
 ]
