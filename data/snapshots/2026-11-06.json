@@ -1,0 +1,534 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "collectedAt": "2026-11-06T14:22:39.732Z",
+  "source": {
+    "url": "https://github.com/trending?since=daily",
+    "since": "daily",
+    "parserVersion": "trending-html-2"
+  },
+  "origin": "live",
+  "repos": [
+    {
+      "rank": 1,
+      "fullName": "zed-industries/zed",
+      "owner": "zed-industries",
+      "name": "zed",
+      "url": "https://github.com/zed-industries/zed",
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "language": "Rust",
+      "totalStars": 93119,
+      "forks": 11460,
+      "starsToday": 292
+    },
+    {
+      "rank": 2,
+      "fullName": "NVIDIA/auto-ontology",
+      "owner": "NVIDIA",
+      "name": "auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "language": "Python",
+      "totalStars": 8460,
+      "forks": 681,
+      "starsToday": 2005
+    },
+    {
+      "rank": 3,
+      "fullName": "rails/rails",
+      "owner": "rails",
+      "name": "rails",
+      "url": "https://github.com/rails/rails",
+      "description": "Ruby on Rails",
+      "language": "Ruby",
+      "totalStars": 58907,
+      "forks": 23823,
+      "starsToday": 44
+    },
+    {
+      "rank": 4,
+      "fullName": "mpv-player/mpv",
+      "owner": "mpv-player",
+      "name": "mpv",
+      "url": "https://github.com/mpv-player/mpv",
+      "description": "🎥 Command line media player",
+      "language": "C",
+      "totalStars": 37784,
+      "forks": 3628,
+      "starsToday": 36
+    },
+    {
+      "rank": 5,
+      "fullName": "rust-lang/rust",
+      "owner": "rust-lang",
+      "name": "rust",
+      "url": "https://github.com/rust-lang/rust",
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "language": "Rust",
+      "totalStars": 121229,
+      "forks": 17355,
+      "starsToday": 186
+    },
+    {
+      "rank": 6,
+      "fullName": "react/react",
+      "owner": "react",
+      "name": "react",
+      "url": "https://github.com/react/react",
+      "description": "The library for web and native user interfaces.",
+      "language": "JavaScript",
+      "totalStars": 252098,
+      "forks": 51793,
+      "starsToday": 244
+    },
+    {
+      "rank": 7,
+      "fullName": "angular/angular",
+      "owner": "angular",
+      "name": "angular",
+      "url": "https://github.com/angular/angular",
+      "description": "Deliver web apps with confidence 🚀",
+      "language": "TypeScript",
+      "totalStars": 101175,
+      "forks": 28902,
+      "starsToday": 128
+    },
+    {
+      "rank": 8,
+      "fullName": "symfony/symfony",
+      "owner": "symfony",
+      "name": "symfony",
+      "url": "https://github.com/symfony/symfony",
+      "description": "The Symfony PHP framework",
+      "language": "PHP",
+      "totalStars": 31276,
+      "forks": 9939,
+      "starsToday": 89
+    },
+    {
+      "rank": 9,
+      "fullName": "prometheus/prometheus",
+      "owner": "prometheus",
+      "name": "prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "description": "The Prometheus monitoring system and time series database.",
+      "language": "Go",
+      "totalStars": 67012,
+      "forks": 10979,
+      "starsToday": 140
+    },
+    {
+      "rank": 10,
+      "fullName": "google/skills",
+      "owner": "google",
+      "name": "skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "language": "Python",
+      "totalStars": 22661,
+      "forks": 1905,
+      "starsToday": 532
+    },
+    {
+      "rank": 11,
+      "fullName": "microsoft/vscode",
+      "owner": "microsoft",
+      "name": "vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "description": "Visual Studio Code",
+      "language": "TypeScript",
+      "totalStars": 194849,
+      "forks": 44404,
+      "starsToday": 295
+    },
+    {
+      "rank": 12,
+      "fullName": "lz4/lz4",
+      "owner": "lz4",
+      "name": "lz4",
+      "url": "https://github.com/lz4/lz4",
+      "description": "Extremely Fast Compression algorithm",
+      "language": "C",
+      "totalStars": 12559,
+      "forks": 1640,
+      "starsToday": 313
+    },
+    {
+      "rank": 13,
+      "fullName": "nushell/nushell",
+      "owner": "nushell",
+      "name": "nushell",
+      "url": "https://github.com/nushell/nushell",
+      "description": "A new type of shell",
+      "language": "Rust",
+      "totalStars": 40818,
+      "forks": 2330,
+      "starsToday": 88
+    },
+    {
+      "rank": 14,
+      "fullName": "etcd-io/etcd",
+      "owner": "etcd-io",
+      "name": "etcd",
+      "url": "https://github.com/etcd-io/etcd",
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "language": "Go",
+      "totalStars": 52503,
+      "forks": 10573,
+      "starsToday": 123
+    },
+    {
+      "rank": 15,
+      "fullName": "openssl/openssl",
+      "owner": "openssl",
+      "name": "openssl",
+      "url": "https://github.com/openssl/openssl",
+      "description": "General purpose TLS and crypto library",
+      "language": "C",
+      "totalStars": 31218,
+      "forks": 11580,
+      "starsToday": 24
+    },
+    {
+      "rank": 16,
+      "fullName": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "totalStars": 316234,
+      "forks": 26453,
+      "starsToday": 2058
+    },
+    {
+      "rank": 17,
+      "fullName": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "name": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "totalStars": 63013,
+      "forks": 4083,
+      "starsToday": 2524
+    },
+    {
+      "rank": 18,
+      "fullName": "astral-sh/ruff",
+      "owner": "astral-sh",
+      "name": "ruff",
+      "url": "https://github.com/astral-sh/ruff",
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "language": "Rust",
+      "totalStars": 50513,
+      "forks": 2597,
+      "starsToday": 107
+    }
+  ],
+  "meta": {
+    "zed-industries/zed": {
+      "fullName": "zed-industries/zed",
+      "fetchedAt": "2026-11-06T14:22:40.206Z",
+      "topics": [
+        "gpui",
+        "rust-lang",
+        "text-editor",
+        "zed"
+      ],
+      "license": "Other",
+      "homepage": "https://zed.dev",
+      "archived": false,
+      "pushedAt": "2026-11-06T14:17:31Z",
+      "createdAt": "2021-02-20T03:01:06Z",
+      "defaultBranch": "main"
+    },
+    "NVIDIA/auto-ontology": {
+      "fullName": "NVIDIA/auto-ontology",
+      "fetchedAt": "2026-11-06T14:22:40.501Z",
+      "topics": [],
+      "license": "Apache-2.0",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-06T13:57:25Z",
+      "createdAt": "2026-04-27T21:45:56Z",
+      "defaultBranch": "main"
+    },
+    "rails/rails": {
+      "fullName": "rails/rails",
+      "fetchedAt": "2026-11-06T14:22:40.769Z",
+      "topics": [
+        "activejob",
+        "activerecord",
+        "framework",
+        "html",
+        "mvc",
+        "rails",
+        "ruby"
+      ],
+      "license": "MIT",
+      "homepage": "https://rubyonrails.org",
+      "archived": false,
+      "pushedAt": "2026-11-06T11:17:36Z",
+      "createdAt": "2008-04-11T02:19:47Z",
+      "defaultBranch": "main"
+    },
+    "mpv-player/mpv": {
+      "fullName": "mpv-player/mpv",
+      "fetchedAt": "2026-11-06T14:22:41.048Z",
+      "topics": [
+        "audio",
+        "c",
+        "ffmpeg",
+        "mplayer",
+        "mpv",
+        "multimedia",
+        "video"
+      ],
+      "license": "Other",
+      "homepage": "https://mpv.io",
+      "archived": false,
+      "pushedAt": "2026-11-05T15:31:49Z",
+      "createdAt": "2012-10-13T08:08:44Z",
+      "defaultBranch": "master"
+    },
+    "rust-lang/rust": {
+      "fullName": "rust-lang/rust",
+      "fetchedAt": "2026-11-06T14:22:41.384Z",
+      "topics": [
+        "compiler",
+        "language",
+        "rust"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://www.rust-lang.org",
+      "archived": false,
+      "pushedAt": "2026-11-06T13:59:27Z",
+      "createdAt": "2010-06-16T20:39:03Z",
+      "defaultBranch": "main"
+    },
+    "react/react": {
+      "fullName": "react/react",
+      "fetchedAt": "2026-11-06T14:22:41.671Z",
+      "topics": [
+        "declarative",
+        "frontend",
+        "javascript",
+        "library",
+        "react",
+        "ui"
+      ],
+      "license": "MIT",
+      "homepage": "https://react.dev",
+      "archived": false,
+      "pushedAt": "2026-11-06T12:12:17Z",
+      "createdAt": "2013-05-24T16:15:54Z",
+      "defaultBranch": "main"
+    },
+    "angular/angular": {
+      "fullName": "angular/angular",
+      "fetchedAt": "2026-11-06T14:22:41.957Z",
+      "topics": [
+        "angular",
+        "javascript",
+        "pwa",
+        "typescript",
+        "web",
+        "web-framework",
+        "web-performance"
+      ],
+      "license": "MIT",
+      "homepage": "https://angular.dev",
+      "archived": false,
+      "pushedAt": "2026-11-06T06:33:01Z",
+      "createdAt": "2014-09-18T16:12:01Z",
+      "defaultBranch": "main"
+    },
+    "symfony/symfony": {
+      "fullName": "symfony/symfony",
+      "fetchedAt": "2026-11-06T14:22:42.230Z",
+      "topics": [
+        "bundle",
+        "framework",
+        "hacktoberfest",
+        "php",
+        "php-framework",
+        "symfony",
+        "symfony-bundle"
+      ],
+      "license": "MIT",
+      "homepage": "https://symfony.com",
+      "archived": false,
+      "pushedAt": "2026-11-06T14:18:10Z",
+      "createdAt": "2010-01-04T14:21:21Z",
+      "defaultBranch": "8.2"
+    },
+    "prometheus/prometheus": {
+      "fullName": "prometheus/prometheus",
+      "fetchedAt": "2026-11-06T14:22:42.487Z",
+      "topics": [
+        "alerting",
+        "graphing",
+        "hacktoberfest",
+        "metrics",
+        "monitoring",
+        "prometheus",
+        "time-series"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://prometheus.io/",
+      "archived": false,
+      "pushedAt": "2026-11-06T14:19:38Z",
+      "createdAt": "2012-11-24T11:14:12Z",
+      "defaultBranch": "main"
+    },
+    "google/skills": {
+      "fullName": "google/skills",
+      "fetchedAt": "2026-11-06T14:22:42.828Z",
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-05T22:00:15Z",
+      "createdAt": "2026-03-31T19:02:20Z",
+      "defaultBranch": "main"
+    },
+    "microsoft/vscode": {
+      "fullName": "microsoft/vscode",
+      "fetchedAt": "2026-11-06T14:22:43.162Z",
+      "topics": [
+        "editor",
+        "electron",
+        "microsoft",
+        "typescript",
+        "visual-studio-code"
+      ],
+      "license": "MIT",
+      "homepage": "https://code.visualstudio.com",
+      "archived": false,
+      "pushedAt": "2026-11-06T14:20:42Z",
+      "createdAt": "2015-09-03T20:23:38Z",
+      "defaultBranch": "main"
+    },
+    "lz4/lz4": {
+      "fullName": "lz4/lz4",
+      "fetchedAt": "2026-11-06T14:22:43.458Z",
+      "topics": [
+        "c",
+        "compression",
+        "lz4"
+      ],
+      "license": "Other",
+      "homepage": "http://www.lz4.org",
+      "archived": false,
+      "pushedAt": "2026-11-06T06:35:56Z",
+      "createdAt": "2014-03-25T15:52:21Z",
+      "defaultBranch": "dev"
+    },
+    "nushell/nushell": {
+      "fullName": "nushell/nushell",
+      "fetchedAt": "2026-11-06T14:22:43.760Z",
+      "topics": [
+        "nushell",
+        "rust",
+        "shell"
+      ],
+      "license": "MIT",
+      "homepage": "https://www.nushell.sh/",
+      "archived": false,
+      "pushedAt": "2026-11-06T12:38:23Z",
+      "createdAt": "2019-05-10T16:59:42Z",
+      "defaultBranch": "main"
+    },
+    "etcd-io/etcd": {
+      "fullName": "etcd-io/etcd",
+      "fetchedAt": "2026-11-06T14:22:44.033Z",
+      "topics": [
+        "cncf",
+        "consensus",
+        "database",
+        "distributed-database",
+        "distributed-systems",
+        "etcd",
+        "go",
+        "key-value",
+        "kubernetes",
+        "raft"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://etcd.io",
+      "archived": false,
+      "pushedAt": "2026-11-06T12:29:27Z",
+      "createdAt": "2013-07-06T21:57:21Z",
+      "defaultBranch": "main"
+    },
+    "openssl/openssl": {
+      "fullName": "openssl/openssl",
+      "fetchedAt": "2026-11-06T14:22:44.364Z",
+      "topics": [
+        "cryptography",
+        "decryption",
+        "encryption",
+        "openssl",
+        "ssl",
+        "tls"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://openssl-library.org/",
+      "archived": false,
+      "pushedAt": "2026-11-06T13:12:16Z",
+      "createdAt": "2013-01-15T22:34:48Z",
+      "defaultBranch": "master"
+    },
+    "mattpocock/skills": {
+      "fullName": "mattpocock/skills",
+      "fetchedAt": "2026-11-06T14:22:44.624Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": "https://aihero.dev/skills",
+      "archived": false,
+      "pushedAt": "2026-11-05T10:40:01Z",
+      "createdAt": "2026-02-03T11:15:53Z",
+      "defaultBranch": "main"
+    },
+    "cloudflare/security-audit-skill": {
+      "fullName": "cloudflare/security-audit-skill",
+      "fetchedAt": "2026-11-06T14:22:44.868Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-09-14T19:29:02Z",
+      "createdAt": "2026-06-18T14:08:44Z",
+      "defaultBranch": "main"
+    },
+    "astral-sh/ruff": {
+      "fullName": "astral-sh/ruff",
+      "fetchedAt": "2026-11-06T14:22:45.121Z",
+      "topics": [
+        "linter",
+        "pep8",
+        "python",
+        "python3",
+        "ruff",
+        "rust",
+        "rustpython",
+        "static-analysis",
+        "static-code-analysis",
+        "style-guide",
+        "styleguide"
+      ],
+      "license": "MIT",
+      "homepage": "https://docs.astral.sh/ruff",
+      "archived": false,
+      "pushedAt": "2026-11-06T14:22:37Z",
+      "createdAt": "2022-08-09T17:17:44Z",
+      "defaultBranch": "main"
+    }
+  },
+  "warnings": []
+}
