@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-08",
+  "collectedAt": "2026-11-08T13:31:45.442Z",
+  "source": {
+    "url": "https://github.com/trending?since=daily",
+    "since": "daily",
+    "parserVersion": "trending-html-2"
+  },
+  "origin": "live",
+  "repos": [
+    {
+      "rank": 1,
+      "fullName": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "totalStars": 101977,
+      "forks": 12027,
+      "starsToday": 2372
+    },
+    {
+      "rank": 2,
+      "fullName": "dsx-ai-factory/nvke",
+      "owner": "dsx-ai-factory",
+      "name": "nvke",
+      "url": "https://github.com/dsx-ai-factory/nvke",
+      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "language": "Go",
+      "totalStars": 702,
+      "forks": 105,
+      "starsToday": 345
+    },
+    {
+      "rank": 3,
+      "fullName": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "name": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "totalStars": 17718,
+      "forks": 2477,
+      "starsToday": 1437
+    },
+    {
+      "rank": 4,
+      "fullName": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "totalStars": 19200,
+      "forks": 3265,
+      "starsToday": 28
+    },
+    {
+      "rank": 5,
+      "fullName": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "totalStars": 47265,
+      "forks": 3238,
+      "starsToday": 812
+    },
+    {
+      "rank": 6,
+      "fullName": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "totalStars": 15170,
+      "forks": 1236,
+      "starsToday": 863
+    },
+    {
+      "rank": 7,
+      "fullName": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "totalStars": 189178,
+      "forks": 22297,
+      "starsToday": 793
+    },
+    {
+      "rank": 8,
+      "fullName": "google-deepmind/mujoco",
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "language": "C++",
+      "totalStars": 16174,
+      "forks": 1941,
+      "starsToday": 26
+    },
+    {
+      "rank": 9,
+      "fullName": "ranxianglei/billion-context",
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "language": "TypeScript",
+      "totalStars": 4877,
+      "forks": 391,
+      "starsToday": 460
+    }
+  ],
+  "meta": {
+    "sherlock-project/sherlock": {
+      "fullName": "sherlock-project/sherlock",
+      "fetchedAt": "2026-11-08T13:31:45.784Z",
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux",
+        "osint",
+        "pentesting",
+        "python",
+        "python3",
+        "reconnaissance",
+        "redteam",
+        "sherlock",
+        "tools"
+      ],
+      "license": "MIT",
+      "homepage": "https://sherlockproject.xyz",
+      "archived": false,
+      "pushedAt": "2026-11-08T05:13:22Z",
+      "createdAt": "2018-12-24T14:30:48Z",
+      "defaultBranch": "master"
+    },
+    "dsx-ai-factory/nvke": {
+      "fullName": "dsx-ai-factory/nvke",
+      "fetchedAt": "2026-11-08T13:31:45.997Z",
+      "topics": [
+        "bare-metal",
+        "cluster-api",
+        "gpu",
+        "kubernetes",
+        "nvidia"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://docs.nvidia.com/nvke/",
+      "archived": false,
+      "pushedAt": "2026-11-07T02:09:56Z",
+      "createdAt": "2026-08-04T15:42:58Z",
+      "defaultBranch": "main"
+    },
+    "milind-soni/OpenMausBot": {
+      "fullName": "milind-soni/OpenMausBot",
+      "fetchedAt": "2026-11-08T13:31:46.175Z",
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "computer-use",
+        "docker",
+        "electron",
+        "grok",
+        "grok-bot",
+        "grok-bot-alternative",
+        "self-hosted",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://www.mausbot.com/",
+      "archived": false,
+      "pushedAt": "2026-11-08T13:25:10Z",
+      "createdAt": "2026-08-11T18:58:55Z",
+      "defaultBranch": "main"
+    },
+    "anthropics/claude-quickstarts": {
+      "fullName": "anthropics/claude-quickstarts",
+      "fetchedAt": "2026-11-08T13:31:46.388Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-06T19:37:57Z",
+      "createdAt": "2024-08-29T19:52:32Z",
+      "defaultBranch": "main"
+    },
+    "vercel-labs/agent-browser": {
+      "fullName": "vercel-labs/agent-browser",
+      "fetchedAt": "2026-11-08T13:31:46.642Z",
+      "topics": [],
+      "license": "Apache-2.0",
+      "homepage": "https://agent-browser.dev",
+      "archived": false,
+      "pushedAt": "2026-11-08T10:03:53Z",
+      "createdAt": "2026-01-11T05:38:15Z",
+      "defaultBranch": "main"
+    },
+    "meta/astryx": {
+      "fullName": "meta/astryx",
+      "fetchedAt": "2026-11-08T13:31:46.830Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": "http://astryx.atmeta.com",
+      "archived": false,
+      "pushedAt": "2026-11-08T13:26:37Z",
+      "createdAt": "2026-01-09T16:20:32Z",
+      "defaultBranch": "main"
+    },
+    "anthropics/skills": {
+      "fullName": "anthropics/skills",
+      "fetchedAt": "2026-11-08T13:31:47.019Z",
+      "topics": [
+        "agent-skills"
+      ],
+      "license": null,
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-06T22:32:32Z",
+      "createdAt": "2025-09-22T15:53:31Z",
+      "defaultBranch": "main"
+    },
+    "google-deepmind/mujoco": {
+      "fullName": "google-deepmind/mujoco",
+      "fetchedAt": "2026-11-08T13:31:47.212Z",
+      "topics": [
+        "mujoco",
+        "physics",
+        "robotics"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://mujoco.org",
+      "archived": false,
+      "pushedAt": "2026-11-07T17:07:40Z",
+      "createdAt": "2021-08-27T12:25:48Z",
+      "defaultBranch": "main"
+    },
+    "ranxianglei/billion-context": {
+      "fullName": "ranxianglei/billion-context",
+      "fetchedAt": "2026-11-08T13:31:47.403Z",
+      "topics": [
+        "dsh-plugin"
+      ],
+      "license": "Other",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-08T13:16:24Z",
+      "createdAt": "2026-08-06T08:27:34Z",
+      "defaultBranch": "master"
+    }
+  },
+  "warnings": []
+}
