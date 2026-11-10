@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "collectedAt": "2026-11-10T14:58:25.375Z",
+  "source": {
+    "url": "https://github.com/trending?since=daily",
+    "since": "daily",
+    "parserVersion": "trending-html-2"
+  },
+  "origin": "live",
+  "repos": [
+    {
+      "rank": 1,
+      "fullName": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "totalStars": 21840,
+      "forks": 1704,
+      "starsToday": 3111
+    },
+    {
+      "rank": 2,
+      "fullName": "anthropics/skills",
+      "owner": "anthropics",
+      "name": "skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "totalStars": 191910,
+      "forks": 22569,
+      "starsToday": 1676
+    },
+    {
+      "rank": 3,
+      "fullName": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "totalStars": 114870,
+      "forks": 12023,
+      "starsToday": 465
+    },
+    {
+      "rank": 4,
+      "fullName": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "name": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "totalStars": 20312,
+      "forks": 3409,
+      "starsToday": 530
+    },
+    {
+      "rank": 5,
+      "fullName": "google-deepmind/mujoco",
+      "owner": "google-deepmind",
+      "name": "mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "language": "C++",
+      "totalStars": 17202,
+      "forks": 2088,
+      "starsToday": 453
+    },
+    {
+      "rank": 6,
+      "fullName": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "totalStars": 11547,
+      "forks": 828,
+      "starsToday": 184
+    },
+    {
+      "rank": 7,
+      "fullName": "homeassistant-ai/ha-mcp",
+      "owner": "homeassistant-ai",
+      "name": "ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "totalStars": 6392,
+      "forks": 370,
+      "starsToday": 792
+    },
+    {
+      "rank": 8,
+      "fullName": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "name": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "totalStars": 48977,
+      "forks": 3409,
+      "starsToday": 775
+    },
+    {
+      "rank": 9,
+      "fullName": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "name": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "totalStars": 108437,
+      "forks": 12573,
+      "starsToday": 2387
+    },
+    {
+      "rank": 10,
+      "fullName": "tokio-rs/topcoat",
+      "owner": "tokio-rs",
+      "name": "topcoat",
+      "url": "https://github.com/tokio-rs/topcoat",
+      "description": "A batteries-included framework for building web apps",
+      "language": "Rust",
+      "totalStars": 6637,
+      "forks": 252,
+      "starsToday": 192
+    },
+    {
+      "rank": 11,
+      "fullName": "ranxianglei/billion-context",
+      "owner": "ranxianglei",
+      "name": "billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "language": "TypeScript",
+      "totalStars": 6057,
+      "forks": 474,
+      "starsToday": 374
+    },
+    {
+      "rank": 12,
+      "fullName": "mattpocock/skills",
+      "owner": "mattpocock",
+      "name": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "totalStars": 320482,
+      "forks": 26847,
+      "starsToday": 1223
+    }
+  ],
+  "meta": {
+    "meta/astryx": {
+      "fullName": "meta/astryx",
+      "fetchedAt": "2026-11-10T14:58:25.879Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": "http://astryx.atmeta.com",
+      "archived": false,
+      "pushedAt": "2026-11-10T14:52:49Z",
+      "createdAt": "2026-01-09T16:20:32Z",
+      "defaultBranch": "main"
+    },
+    "anthropics/skills": {
+      "fullName": "anthropics/skills",
+      "fetchedAt": "2026-11-10T14:58:26.248Z",
+      "topics": [
+        "agent-skills"
+      ],
+      "license": null,
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-06T22:32:32Z",
+      "createdAt": "2025-09-22T15:53:31Z",
+      "defaultBranch": "main"
+    },
+    "addyosmani/agent-skills": {
+      "fullName": "addyosmani/agent-skills",
+      "fetchedAt": "2026-11-10T14:58:26.610Z",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "homepage": "https://skills.addy.ie",
+      "archived": false,
+      "pushedAt": "2026-11-01T19:24:49Z",
+      "createdAt": "2026-02-15T20:20:26Z",
+      "defaultBranch": "main"
+    },
+    "anthropics/claude-quickstarts": {
+      "fullName": "anthropics/claude-quickstarts",
+      "fetchedAt": "2026-11-10T14:58:26.944Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-06T19:37:57Z",
+      "createdAt": "2024-08-29T19:52:32Z",
+      "defaultBranch": "main"
+    },
+    "google-deepmind/mujoco": {
+      "fullName": "google-deepmind/mujoco",
+      "fetchedAt": "2026-11-10T14:58:27.310Z",
+      "topics": [
+        "mujoco",
+        "physics",
+        "robotics"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://mujoco.org",
+      "archived": false,
+      "pushedAt": "2026-11-10T10:30:27Z",
+      "createdAt": "2021-08-27T12:25:48Z",
+      "defaultBranch": "main"
+    },
+    "we-promise/sure": {
+      "fullName": "we-promise/sure",
+      "fetchedAt": "2026-11-10T14:58:27.620Z",
+      "topics": [],
+      "license": "AGPL-3.0",
+      "homepage": "https://sure.am",
+      "archived": false,
+      "pushedAt": "2026-11-10T07:09:52Z",
+      "createdAt": "2025-07-23T04:13:55Z",
+      "defaultBranch": "main"
+    },
+    "homeassistant-ai/ha-mcp": {
+      "fullName": "homeassistant-ai/ha-mcp",
+      "fetchedAt": "2026-11-10T14:58:27.915Z",
+      "topics": [
+        "ai",
+        "claude",
+        "hacs",
+        "home-assistant",
+        "home-automation",
+        "llm",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "license": "MIT",
+      "homepage": "https://homeassistant-ai.github.io/ha-mcp/",
+      "archived": false,
+      "pushedAt": "2026-11-10T13:48:35Z",
+      "createdAt": "2025-09-14T13:23:45Z",
+      "defaultBranch": "master"
+    },
+    "vercel-labs/agent-browser": {
+      "fullName": "vercel-labs/agent-browser",
+      "fetchedAt": "2026-11-10T14:58:28.402Z",
+      "topics": [],
+      "license": "Apache-2.0",
+      "homepage": "https://agent-browser.dev",
+      "archived": false,
+      "pushedAt": "2026-11-10T14:38:04Z",
+      "createdAt": "2026-01-11T05:38:15Z",
+      "defaultBranch": "main"
+    },
+    "sherlock-project/sherlock": {
+      "fullName": "sherlock-project/sherlock",
+      "fetchedAt": "2026-11-10T14:58:28.705Z",
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux",
+        "osint",
+        "pentesting",
+        "python",
+        "python3",
+        "reconnaissance",
+        "redteam",
+        "sherlock",
+        "tools"
+      ],
+      "license": "MIT",
+      "homepage": "https://sherlockproject.xyz",
+      "archived": false,
+      "pushedAt": "2026-11-10T05:13:55Z",
+      "createdAt": "2018-12-24T14:30:48Z",
+      "defaultBranch": "master"
+    },
+    "tokio-rs/topcoat": {
+      "fullName": "tokio-rs/topcoat",
+      "fetchedAt": "2026-11-10T14:58:29.096Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-09T18:40:53Z",
+      "createdAt": "2026-04-03T14:27:27Z",
+      "defaultBranch": "main"
+    },
+    "ranxianglei/billion-context": {
+      "fullName": "ranxianglei/billion-context",
+      "fetchedAt": "2026-11-10T14:58:29.405Z",
+      "topics": [
+        "dsh-plugin"
+      ],
+      "license": "Other",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-10T14:44:57Z",
+      "createdAt": "2026-08-06T08:27:34Z",
+      "defaultBranch": "master"
+    },
+    "mattpocock/skills": {
+      "fullName": "mattpocock/skills",
+      "fetchedAt": "2026-11-10T14:58:29.771Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": "https://aihero.dev/skills",
+      "archived": false,
+      "pushedAt": "2026-11-09T14:03:07Z",
+      "createdAt": "2026-02-03T11:15:53Z",
+      "defaultBranch": "main"
+    }
+  },
+  "warnings": []
+}
