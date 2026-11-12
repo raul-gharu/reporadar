@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "collectedAt": "2026-11-12T15:21:40.463Z",
+  "source": {
+    "url": "https://github.com/trending?since=daily",
+    "since": "daily",
+    "parserVersion": "trending-html-2"
+  },
+  "origin": "live",
+  "repos": [
+    {
+      "rank": 1,
+      "fullName": "GoogleChrome/modern-web-guidance-src",
+      "owner": "GoogleChrome",
+      "name": "modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": null,
+      "language": "TypeScript",
+      "totalStars": 2415,
+      "forks": 171,
+      "starsToday": 799
+    },
+    {
+      "rank": 2,
+      "fullName": "openai/codex-security",
+      "owner": "openai",
+      "name": "codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "language": "TypeScript",
+      "totalStars": 12163,
+      "forks": 967,
+      "starsToday": 663
+    },
+    {
+      "rank": 3,
+      "fullName": "nvm-sh/nvm",
+      "owner": "nvm-sh",
+      "name": "nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "language": "Shell",
+      "totalStars": 95950,
+      "forks": 10755,
+      "starsToday": 79
+    },
+    {
+      "rank": 4,
+      "fullName": "pookjw/HermesEnabler",
+      "owner": "pookjw",
+      "name": "HermesEnabler",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "language": "Objective-C",
+      "totalStars": 1413,
+      "forks": 133,
+      "starsToday": 390
+    },
+    {
+      "rank": 5,
+      "fullName": "we-promise/sure",
+      "owner": "we-promise",
+      "name": "sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "totalStars": 13618,
+      "forks": 1007,
+      "starsToday": 974
+    },
+    {
+      "rank": 6,
+      "fullName": "QwenLM/qwen-code",
+      "owner": "QwenLM",
+      "name": "qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "totalStars": 29624,
+      "forks": 3388,
+      "starsToday": 151
+    },
+    {
+      "rank": 7,
+      "fullName": "ashhart/TensorFold",
+      "owner": "ashhart",
+      "name": "TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "language": "Zig",
+      "totalStars": 1864,
+      "forks": 390,
+      "starsToday": 58
+    },
+    {
+      "rank": 8,
+      "fullName": "nodejs/node",
+      "owner": "nodejs",
+      "name": "node",
+      "url": "https://github.com/nodejs/node",
+      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "language": "JavaScript",
+      "totalStars": 123532,
+      "forks": 38052,
+      "starsToday": 133
+    },
+    {
+      "rank": 9,
+      "fullName": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "name": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "totalStars": 116438,
+      "forks": 12195,
+      "starsToday": 812
+    },
+    {
+      "rank": 10,
+      "fullName": "meta/astryx",
+      "owner": "meta",
+      "name": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "totalStars": 26135,
+      "forks": 2026,
+      "starsToday": 1789
+    },
+    {
+      "rank": 11,
+      "fullName": "CopilotKit/OpenBot",
+      "owner": "CopilotKit",
+      "name": "OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "totalStars": 11327,
+      "forks": 1403,
+      "starsToday": 291
+    },
+    {
+      "rank": 12,
+      "fullName": "Alishahryar1/free-claude-code",
+      "owner": "Alishahryar1",
+      "name": "free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "totalStars": 68980,
+      "forks": 10730,
+      "starsToday": 461
+    },
+    {
+      "rank": 13,
+      "fullName": "ggml-org/llama.cpp",
+      "owner": "ggml-org",
+      "name": "llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "LLM inference in C/C++",
+      "language": "C++",
+      "totalStars": 134343,
+      "forks": 25480,
+      "starsToday": 162
+    }
+  ],
+  "meta": {
+    "GoogleChrome/modern-web-guidance-src": {
+      "fullName": "GoogleChrome/modern-web-guidance-src",
+      "fetchedAt": "2026-11-12T15:21:40.944Z",
+      "topics": [],
+      "license": "Apache-2.0",
+      "homepage": "https://goo.gle/modern-web-guidance",
+      "archived": false,
+      "pushedAt": "2026-11-12T14:34:43Z",
+      "createdAt": "2026-01-27T20:22:24Z",
+      "defaultBranch": "main"
+    },
+    "openai/codex-security": {
+      "fullName": "openai/codex-security",
+      "fetchedAt": "2026-11-12T15:21:41.256Z",
+      "topics": [
+        "ai-security",
+        "application-security",
+        "cli",
+        "code-scanning",
+        "codex",
+        "codex-security",
+        "cybersecurity",
+        "devsecops",
+        "nodejs",
+        "npm",
+        "openai",
+        "sdk",
+        "security",
+        "typescript",
+        "vulnerability-scanning"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://developers.openai.com/codex/security",
+      "archived": false,
+      "pushedAt": "2026-11-12T10:06:19Z",
+      "createdAt": "2026-07-13T22:00:13Z",
+      "defaultBranch": "main"
+    },
+    "nvm-sh/nvm": {
+      "fullName": "nvm-sh/nvm",
+      "fetchedAt": "2026-11-12T15:21:41.527Z",
+      "topics": [
+        "bash",
+        "install",
+        "lts",
+        "node",
+        "node-js",
+        "nodejs",
+        "nvm",
+        "nvmrc",
+        "posix",
+        "posix-compliant",
+        "shell",
+        "version-manager",
+        "zsh"
+      ],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-12T05:50:45Z",
+      "createdAt": "2010-04-15T17:47:47Z",
+      "defaultBranch": "master"
+    },
+    "pookjw/HermesEnabler": {
+      "fullName": "pookjw/HermesEnabler",
+      "fetchedAt": "2026-11-12T15:21:41.806Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-12T14:49:08Z",
+      "createdAt": "2024-12-14T11:32:03Z",
+      "defaultBranch": "main"
+    },
+    "we-promise/sure": {
+      "fullName": "we-promise/sure",
+      "fetchedAt": "2026-11-12T15:21:42.141Z",
+      "topics": [],
+      "license": "AGPL-3.0",
+      "homepage": "https://sure.am",
+      "archived": false,
+      "pushedAt": "2026-11-12T10:58:04Z",
+      "createdAt": "2025-07-23T04:13:55Z",
+      "defaultBranch": "main"
+    },
+    "QwenLM/qwen-code": {
+      "fullName": "QwenLM/qwen-code",
+      "fetchedAt": "2026-11-12T15:21:42.435Z",
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "qwen",
+        "terminal",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
+      "archived": false,
+      "pushedAt": "2026-11-12T15:18:33Z",
+      "createdAt": "2025-06-26T01:37:46Z",
+      "defaultBranch": "main"
+    },
+    "ashhart/TensorFold": {
+      "fullName": "ashhart/TensorFold",
+      "fetchedAt": "2026-11-12T15:21:42.717Z",
+      "topics": [
+        "ai",
+        "ai-tools",
+        "llm",
+        "llm-inference",
+        "llm-tools"
+      ],
+      "license": "Apache-2.0",
+      "homepage": "https://tensorfold.dev",
+      "archived": false,
+      "pushedAt": "2026-11-12T14:48:51Z",
+      "createdAt": "2026-06-19T20:27:39Z",
+      "defaultBranch": "main"
+    },
+    "nodejs/node": {
+      "fullName": "nodejs/node",
+      "fetchedAt": "2026-11-12T15:21:43.085Z",
+      "topics": [
+        "javascript",
+        "js",
+        "linux",
+        "macos",
+        "mit",
+        "node",
+        "nodejs",
+        "runtime",
+        "windows"
+      ],
+      "license": "Other",
+      "homepage": "https://nodejs.org",
+      "archived": false,
+      "pushedAt": "2026-11-12T14:41:07Z",
+      "createdAt": "2014-11-26T19:57:11Z",
+      "defaultBranch": "main"
+    },
+    "addyosmani/agent-skills": {
+      "fullName": "addyosmani/agent-skills",
+      "fetchedAt": "2026-11-12T15:21:43.401Z",
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "homepage": "https://skills.addy.ie",
+      "archived": false,
+      "pushedAt": "2026-11-01T19:24:49Z",
+      "createdAt": "2026-02-15T20:20:26Z",
+      "defaultBranch": "main"
+    },
+    "meta/astryx": {
+      "fullName": "meta/astryx",
+      "fetchedAt": "2026-11-12T15:21:43.697Z",
+      "topics": [],
+      "license": "MIT",
+      "homepage": "http://astryx.atmeta.com",
+      "archived": false,
+      "pushedAt": "2026-11-12T15:20:19Z",
+      "createdAt": "2026-01-09T16:20:32Z",
+      "defaultBranch": "main"
+    },
+    "CopilotKit/OpenBot": {
+      "fullName": "CopilotKit/OpenBot",
+      "fetchedAt": "2026-11-12T15:21:43.998Z",
+      "topics": [
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
+      ],
+      "license": "MIT",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-12T15:18:18Z",
+      "createdAt": "2026-08-17T00:44:59Z",
+      "defaultBranch": "main"
+    },
+    "Alishahryar1/free-claude-code": {
+      "fullName": "Alishahryar1/free-claude-code",
+      "fetchedAt": "2026-11-12T15:21:44.277Z",
+      "topics": [],
+      "license": "Other",
+      "homepage": null,
+      "archived": false,
+      "pushedAt": "2026-11-12T10:03:45Z",
+      "createdAt": "2026-01-28T19:02:30Z",
+      "defaultBranch": "main"
+    },
+    "ggml-org/llama.cpp": {
+      "fullName": "ggml-org/llama.cpp",
+      "fetchedAt": "2026-11-12T15:21:44.643Z",
+      "topics": [
+        "ggml"
+      ],
+      "license": "MIT",
+      "homepage": "https://llama.app",
+      "archived": false,
+      "pushedAt": "2026-11-12T14:55:04Z",
+      "createdAt": "2023-03-10T18:58:00Z",
+      "defaultBranch": "master"
+    }
+  },
+  "warnings": []
+}
