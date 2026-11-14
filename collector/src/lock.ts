@@ -9,6 +9,11 @@ export class LockHeldError extends Error {}
  * In GitHub Actions the workflow `concurrency` group is the primary guard;
  * this is a second line of defence. A lock older than `staleMinutes` is
  * assumed abandoned (crashed run) and replaced.
+ *
+ * Age is clamped to >= 0 because filesystem mtimes can occasionally be a few
+ * milliseconds in the future relative to Date.now(), which previously made a
+ * freshly created lock appear to have a negative age and fail the stale check
+ * when staleMinutes === 0.
  */
 export async function withLock<T>(lockFile: string, staleMinutes: number, fn: () => Promise<T>): Promise<T> {
   await fs.mkdir(path.dirname(lockFile), { recursive: true });
@@ -18,7 +23,7 @@ export async function withLock<T>(lockFile: string, staleMinutes: number, fn: ()
   } catch (e: any) {
     if (e?.code !== "EEXIST") throw e;
     const stat = await fs.stat(lockFile).catch(() => null);
-    const ageMin = stat ? (Date.now() - stat.mtimeMs) / 60000 : Infinity;
+    const ageMin = stat ? Math.max(0, (Date.now() - stat.mtimeMs) / 60000) : Infinity;
     if (ageMin < staleMinutes) {
       throw new LockHeldError(`Another RepoRadar run holds ${lockFile} (age ${ageMin.toFixed(1)} min).`);
     }
