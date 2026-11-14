@@ -100,15 +100,6 @@ export default function Today() {
         GitHub's own "stars today", plus what changed between our two most recent daily snapshots.
       </PageHeader>
 
-      <FeedStatus feed={data} />
-
-      <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-y border-border py-5 sm:grid-cols-4">
-        <Stat label="Repositories in list" value={num(data.repos.length)} hint="Rows collected from GitHub Trending (daily)" />
-        <Stat label="New to our list" value={newCount == null ? "—" : num(newCount)} hint="Not in the previous snapshot and never seen before" />
-        <Stat label="Returning" value={returning == null ? "—" : num(returning)} hint="Absent from the previous snapshot but seen earlier" />
-        <Stat label="Meet the alert rule" value={num(ruleCount)} hint="Relevant category and at least the minimum displayed stars today" />
-      </div>
-
       <section aria-label="Filters" className="mt-6 space-y-3">
         <div className="flex flex-wrap items-center gap-2">
           <SlidersHorizontal className="mr-1 h-4 w-4 text-faint" aria-hidden />
@@ -184,6 +175,17 @@ export default function Today() {
           <ul className="mt-2 list-disc space-y-1 pl-5">{data.snapshot.warnings.map((w, i) => <li key={i}>{w}</li>)}</ul>
         </details>
       )}
+
+      <div className="mt-10 space-y-6">
+        <FeedStatus feed={data} />
+
+        <div className="grid grid-cols-2 gap-x-6 gap-y-5 border-y border-border py-5 sm:grid-cols-4">
+          <Stat label="Repositories in list" value={num(data.repos.length)} hint="Rows collected from GitHub Trending (daily)" />
+          <Stat label="New to our list" value={newCount == null ? "—" : num(newCount)} hint="Not in the previous snapshot and never seen before" />
+          <Stat label="Returning" value={returning == null ? "—" : num(returning)} hint="Absent from the previous snapshot but seen earlier" />
+          <Stat label="Meet the alert rule" value={num(ruleCount)} hint="Relevant category and at least the minimum displayed stars today" />
+        </div>
+      </div>
 
       {notesFor?.summary && <NotesDialog summary={notesFor.summary} onClose={() => setNotesFor(null)} />}
     </>
