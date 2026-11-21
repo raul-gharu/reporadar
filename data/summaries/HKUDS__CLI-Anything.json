@@ -1,0 +1,59 @@
+{
+  "fullName": "HKUDS/CLI-Anything",
+  "cacheKey": "3cb1f35c6f1c0568e619c38981da4f22",
+  "generatedAt": "2026-11-21T14:50:42.391Z",
+  "model": "gemini-3.8-flash",
+  "promptVersion": "learn-v1",
+  "readmeSha": "8a78b5420911eff5e7cc219bf1ecb2a12b562874",
+  "origin": "live",
+  "summary": {
+    "whatItDoes": "CLI-Anything provides command-line interface harnesses, registries, and agent skills (SKILL.md) to make third-party software, desktop applications, and services controllable by AI agents.",
+    "intendedUsers": [
+      "AI agent developers",
+      "Automation engineers",
+      "Software developers building agentic workflows"
+    ],
+    "documentedTechnologies": [
+      "Python",
+      "pip",
+      "npm",
+      "brew",
+      "SQLCipher",
+      "defusedxml",
+      "ArcPy"
+    ],
+    "learningOpportunities": [
+      "Structuring CLI wrappers to make complex desktop tools and services accessible to LLM agents.",
+      "Designing agent skills (`SKILL.md`) and meta-skills for autonomous CLI discovery and installation.",
+      "Implementing safe execution practices such as XML sanitisation with `defusedxml` and path validation for CLI tooling."
+    ],
+    "smallExperiment": {
+      "title": "Install and explore the CLI-Hub package manager",
+      "steps": [
+        "Create an isolated virtual environment using Python (`python -m venv .venv` and activate it).",
+        "Install the hub CLI by running: pip install cli-anything-hub",
+        "Run `cli-hub --help` to inspect the available subcommands and registry inspection features.",
+        "Browse available community harnesses without installing additional software."
+      ]
+    },
+    "caveats": [
+      "The repository's documentation is truncated at the end of the README.",
+      "Many supported tools (e.g. FreeCAD, Blender, ArcGIS Pro) require external native binaries or desktop applications to function."
+    ],
+    "sources": [
+      {
+        "label": "HKUDS/CLI-Anything GitHub Repository",
+        "url": "https://github.com/HKUDS/CLI-Anything"
+      },
+      {
+        "label": "HKUDS/CLI-Anything README",
+        "url": "https://github.com/HKUDS/CLI-Anything/blob/main/README.md"
+      },
+      {
+        "label": "CLI-Hub Official Site",
+        "url": "https://clianything.cc/"
+      }
+    ]
+  },
+  "validationNotes": []
+}
